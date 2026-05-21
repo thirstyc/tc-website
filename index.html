@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thirsty Cunt — Wine Without The Performance</title>
+  <meta name="description" content="Thirsty Cunt is a wine lifestyle brand by Catherine Gignac. Home of Thirsty Cellar, the wine cellar app, the Substack, and live tastings in Toronto and Montréal." />
+  <link rel="icon" type="image/png" href="assets/logo-turquoise.png" />
+  <link rel="apple-touch-icon" href="assets/logo-turquoise.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=IBM+Plex+Mono:wght@400;500&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --vintage: #261614;
+      --mineral: #ADBDCC;
+      --deep-turquoise: #094943;
+      --turquoise: #009C8E;
+      --burnt-sunset: #C62F0E;
+      --dark-cherries: #700001;
+      --rose: #EDD9DF;
+      --cream: #faf7f2;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 300;
+      color: var(--vintage);
+      background: var(--cream);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .serif {
+      font-family: 'Instrument Serif', serif;
+      font-weight: 400;
+      letter-spacing: -0.01em;
+    }
+
+    .mono {
+      font-family: 'IBM Plex Mono', monospace;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 0.72rem;
+    }
+
+    /* Navigation */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      padding: 1.5rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 100;
+      background: rgba(250, 247, 242, 0.85);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(38, 22, 20, 0.08);
+    }
+
+    nav .logo {
+      display: block;
+      line-height: 0;
+    }
+
+    nav .logo img {
+      height: 52px;
+      width: auto;
+      display: block;
+    }
+
+    @media (max-width: 640px) {
+      nav .logo img { height: 44px; }
+    }
+
+    nav .nav-links {
+      display: flex;
+      gap: 2rem;
+    }
+
+    nav .nav-links a {
+      color: var(--vintage);
+      text-decoration: none;
+      font-family: 'IBM Plex Mono', monospace;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 0.7rem;
+      transition: opacity 0.2s ease;
+    }
+
+    nav .nav-links a:hover {
+      opacity: 0.55;
+    }
+
+    @media (max-width: 640px) {
+      nav .nav-links { display: none; }
+    }
+
+    /* Hero */
+    .hero {
+      min-height: 100vh;
+      padding: 8rem 2rem 4rem;
+      display: grid;
+      grid-template-columns: 1fr;
+      align-content: center;
+      max-width: 1400px;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    .hero-eyebrow {
+      margin-bottom: 2.5rem;
+      color: var(--vintage);
+      opacity: 0.6;
+    }
+
+    .hero h1 {
+      font-family: 'Instrument Serif', serif;
+      font-weight: 400;
+      font-size: clamp(3.5rem, 11vw, 9.5rem);
+      line-height: 0.95;
+      letter-spacing: -0.025em;
+      color: var(--vintage);
+      margin-bottom: 2rem;
+    }
+
+    .hero h1 .italic {
+      font-style: italic;
+      color: var(--burnt-sunset);
+    }
+
+    .hero-meta {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+      max-width: 600px;
+      margin-top: 4rem;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(38, 22, 20, 0.15);
+    }
+
+    .hero-meta .label {
+      color: var(--vintage);
+      opacity: 0.55;
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+
+    .hero-meta .value {
+      font-family: 'Instrument Serif', serif;
+      font-size: 1.3rem;
+      line-height: 1.3;
+    }
+
+    /* Manifesto section */
+    .manifesto {
+      padding: 8rem 2rem;
+      background: var(--rose);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .manifesto-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 4rem;
+      align-items: start;
+    }
+
+    @media (max-width: 768px) {
+      .manifesto-inner {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+    }
+
+    .manifesto .mono { opacity: 0.7; }
+
+    .manifesto p {
+      font-family: 'Instrument Serif', serif;
+      font-size: clamp(1.5rem, 3vw, 2.4rem);
+      line-height: 1.3;
+      color: var(--vintage);
+    }
+
+    .manifesto p + p {
+      margin-top: 1.5rem;
+    }
+
+    .manifesto p .italic {
+      font-style: italic;
+    }
+
+    /* Product sections */
+    .product {
+      padding: 7rem 2rem;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: center;
+    }
+
+    @media (max-width: 840px) {
+      .product-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
+    }
+
+    .product-grid.reverse .text-block { order: 2; }
+    @media (max-width: 840px) {
+      .product-grid.reverse .text-block { order: 0; }
+    }
+
+    .product .mono {
+      color: var(--burnt-sunset);
+      display: block;
+      margin-bottom: 1.5rem;
+    }
+
+    .product h2 {
+      font-family: 'Instrument Serif', serif;
+      font-weight: 400;
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      line-height: 1;
+      letter-spacing: -0.02em;
+      margin-bottom: 1.5rem;
+      color: var(--vintage);
+    }
+
+    .product h2 .italic {
+      font-style: italic;
+      color: var(--deep-turquoise);
+    }
+
+    .product-description {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: 2rem;
+      max-width: 480px;
+      color: var(--vintage);
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-block;
+      font-family: 'IBM Plex Mono', monospace;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 0.72rem;
+      padding: 0.95rem 1.6rem;
+      text-decoration: none;
+      border: 1px solid var(--vintage);
+      color: var(--vintage);
+      background: transparent;
+      transition: all 0.25s ease;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background: var(--vintage);
+      color: var(--cream);
+    }
+
+    .btn-filled {
+      background: var(--vintage);
+      color: var(--cream);
+    }
+    .btn-filled:hover {
+      background: var(--burnt-sunset);
+      border-color: var(--burnt-sunset);
+    }
+
+    .btn-coming-soon {
+      pointer-events: none;
+      opacity: 0.6;
+    }
+
+    /* Visual blocks */
+    .visual-block {
+      aspect-ratio: 4/5;
+      border-radius: 2px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .visual-cellar {
+      background: linear-gradient(180deg, var(--deep-turquoise) 0%, #062f2c 100%);
+    }
+
+    .visual-tastings {
+      background: var(--burnt-sunset);
+    }
+
+    .visual-substack {
+      background: var(--mineral);
+    }
+
+    .visual-placeholder {
+      font-family: 'Instrument Serif', serif;
+      font-style: italic;
+      font-size: 5rem;
+      color: var(--cream);
+      opacity: 0.85;
+      text-align: center;
+      line-height: 1;
+    }
+
+    .visual-placeholder.dark {
+      color: var(--vintage);
+      opacity: 0.6;
+    }
+
+    .visual-tag {
+      position: absolute;
+      bottom: 1.5rem;
+      left: 1.5rem;
+      color: var(--cream);
+      opacity: 0.7;
+    }
+    .visual-tag.dark { color: var(--vintage); }
+
+    /* City buttons in tastings */
+    .city-buttons {
+      display: flex;
+      gap: 0.8rem;
+      flex-wrap: wrap;
+    }
+
+    /* Divider */
+    .section-divider {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      border-top: 1px solid rgba(38, 22, 20, 0.12);
+    }
+
+    /* Instagram strip */
+    .insta-strip {
+      padding: 5rem 2rem;
+      text-align: center;
+      background: var(--cream);
+    }
+
+    .insta-strip .mono {
+      color: var(--vintage);
+      opacity: 0.55;
+      margin-bottom: 1.5rem;
+      display: block;
+    }
+
+    .insta-strip h3 {
+      font-family: 'Instrument Serif', serif;
+      font-weight: 400;
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      letter-spacing: -0.02em;
+      margin-bottom: 2rem;
+    }
+
+    .insta-strip h3 .italic { font-style: italic; }
+
+    /* Subscribe strip */
+    .subscribe-strip {
+      background: var(--deep-turquoise);
+      color: var(--cream);
+      padding: 7rem 2rem;
+      text-align: center;
+    }
+
+    .subscribe-inner {
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    .subscribe-kicker {
+      color: var(--cream);
+      opacity: 0.65;
+      display: block;
+      margin-bottom: 1.5rem;
+    }
+
+    .subscribe-strip h3 {
+      font-family: 'Instrument Serif', serif;
+      font-weight: 400;
+      font-size: clamp(2.2rem, 5vw, 3.8rem);
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+      margin-bottom: 1.5rem;
+    }
+
+    .subscribe-strip h3 .italic {
+      font-style: italic;
+      color: var(--rose);
+    }
+
+    .subscribe-desc {
+      font-size: 1.05rem;
+      line-height: 1.6;
+      opacity: 0.85;
+      max-width: 480px;
+      margin: 0 auto 2.5rem;
+    }
+
+    .subscribe-strip .btn-filled {
+      background: var(--cream);
+      color: var(--vintage);
+      border-color: var(--cream);
+    }
+
+    .subscribe-strip .btn-filled:hover {
+      background: var(--burnt-sunset);
+      color: var(--cream);
+      border-color: var(--burnt-sunset);
+    }
+
+    /* Footer */
+    footer {
+      background: var(--vintage);
+      color: var(--cream);
+      padding: 5rem 2rem 2rem;
+    }
+
+    .footer-inner {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 3rem;
+      align-items: start;
+    }
+
+    @media (max-width: 768px) {
+      .footer-inner {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+    }
+
+    footer .footer-brand {
+      display: block;
+      margin-bottom: 1.5rem;
+      line-height: 0;
+    }
+
+    footer .footer-brand img {
+      width: 180px;
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    @media (max-width: 768px) {
+      footer .footer-brand img { width: 150px; }
+    }
+
+    footer p {
+      opacity: 0.65;
+      max-width: 380px;
+      font-size: 0.95rem;
+    }
+
+    footer .mono {
+      color: var(--cream);
+      opacity: 0.55;
+      margin-bottom: 1rem;
+      display: block;
+    }
+
+    footer ul { list-style: none; }
+    footer li { margin-bottom: 0.6rem; }
+    footer a {
+      color: var(--cream);
+      text-decoration: none;
+      opacity: 0.85;
+      transition: opacity 0.2s ease;
+      font-size: 0.95rem;
+    }
+    footer a:hover { opacity: 1; }
+
+    .footer-bottom {
+      max-width: 1400px;
+      margin: 4rem auto 0;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(250, 247, 242, 0.12);
+      display: flex;
+      justify-content: space-between;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      opacity: 0.5;
+    }
+
+    @media (max-width: 600px) {
+      .footer-bottom {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+    }
+
+    /* Tally Modal */
+    .tally-modal {
+      position: fixed;
+      inset: 0;
+      background: rgba(38, 22, 20, 0.75);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+      padding: 2rem;
+    }
+
+    .tally-modal.open { display: flex; }
+
+    .tally-modal-inner {
+      background: var(--cream);
+      max-width: 540px;
+      width: 100%;
+      padding: 2.5rem;
+      position: relative;
+      max-height: 90vh;
+      overflow-y: auto;
+    }
+
+    .tally-modal-close {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: var(--vintage);
+      line-height: 1;
+      padding: 0.5rem;
+    }
+
+    .tally-modal h3 {
+      font-family: 'Instrument Serif', serif;
+      font-weight: 400;
+      font-size: 2rem;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.5rem;
+    }
+
+    .tally-modal h3 .italic { font-style: italic; }
+
+    .tally-modal-sub {
+      opacity: 0.7;
+      margin-bottom: 1.5rem;
+      font-size: 0.95rem;
+    }
+
+    .tally-modal iframe {
+      width: 100%;
+      min-height: 380px;
+      border: none;
+    }
+
+    /* Fade-in entrance */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeIn 1s ease forwards;
+    }
+
+    .fade-in.delay-1 { animation-delay: 0.15s; }
+    .fade-in.delay-2 { animation-delay: 0.3s; }
+    .fade-in.delay-3 { animation-delay: 0.45s; }
+    .fade-in.delay-4 { animation-delay: 0.6s; }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="#" class="logo" aria-label="Thirsty Cunt">
+      <img src="assets/logo-turquoise.png" alt="Thirsty Cunt" />
+    </a>
+    <div class="nav-links">
+      <a href="#about">Brand</a>
+      <a href="#cellar">App</a>
+      <a href="#tastings">Tastings</a>
+      <a href="#substack">Writing</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="mono hero-eyebrow fade-in">A Wine Lifestyle Brand</div>
+    <h1 class="fade-in delay-1">
+      Wine Without<br>
+      The <span class="italic">Performance.</span>
+    </h1>
+  </section>
+
+  <!-- MANIFESTO -->
+  <section class="manifesto" id="about">
+    <div class="manifesto-inner">
+      <span class="mono">The Idea</span>
+      <div>
+        <p>Wine doesn't need to feel complicated to be good.</p>
+        <p>Most of the time the right bottle is simply the one that feels right for the table — something fresh, expressive, and made by people who care about what they're doing.</p>
+        <p><span class="italic">Thirsty Cunt</span> is a brand for the curious — people who order wine often, host the dinner, travel for the bottle. People who want in on the conversation without the lecture.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- THIRSTY CELLAR APP -->
+  <section class="product" id="cellar">
+    <div class="product-grid">
+      <div class="text-block">
+        <span class="mono">Product / 01</span>
+        <h2>Thirsty <span class="italic">Cellar.</span></h2>
+        <p class="product-description">A wine cellar in your pocket. Log every bottle, track what's ageing, scan a label and have it remembered. Built for people who actually drink the wine they buy.</p>
+        <a href="#" class="btn btn-filled btn-coming-soon">Coming Soon · App Store</a>
+      </div>
+      <div class="visual-block visual-cellar">
+        <div class="visual-placeholder">tc</div>
+        <span class="mono visual-tag">iOS · 2026</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- TASTINGS -->
+  <section class="product" id="tastings">
+    <div class="product-grid reverse">
+      <div class="visual-block visual-tastings">
+        <div class="visual-placeholder">à table</div>
+        <span class="mono visual-tag">In Person</span>
+      </div>
+      <div class="text-block">
+        <span class="mono">Experience / 02</span>
+        <h2>Wine <span class="italic">Tastings.</span></h2>
+        <p class="product-description">Small, blind, opinionated. Hosted in restaurants we love in Toronto and Montréal. Pulled together for people curious enough to drink without the label.</p>
+        <span class="mono" style="display:block; margin-bottom: 0.8rem; opacity: 0.6; color: var(--vintage);">Join The Waitlist</span>
+        <div class="city-buttons">
+          <button type="button" class="btn" onclick="openTally('toronto')">Toronto</button>
+          <button type="button" class="btn" onclick="openTally('montreal')">Montréal</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- SUBSTACK -->
+  <section class="product" id="substack">
+    <div class="product-grid">
+      <div class="text-block">
+        <span class="mono">Editorial / 03</span>
+        <h2>The <span class="italic">Substack.</span></h2>
+        <p class="product-description">Wine writing the way it should sound. Candid notes, region deep-dives, opinions on bottles worth opening. New stories every couple of weeks.</p>
+        <!-- Substack URL -->
+        <a href="https://open.substack.com/pub/catgi" target="_blank" rel="noopener" class="btn">Read The Substack</a>
+      </div>
+      <div class="visual-block visual-substack">
+        <div class="visual-placeholder dark">words</div>
+        <span class="mono visual-tag dark">Substack · Free</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- INSTAGRAM -->
+  <section class="insta-strip">
+    <span class="mono">Daily / On Instagram</span>
+    <h3>Bottles, Tables, <span class="italic">Glasses Half-Full.</span></h3>
+    <a href="https://instagram.com/thirstyc.official" target="_blank" rel="noopener" class="btn">@thirstyc.official</a>
+  </section>
+
+  <!-- SUBSCRIBE STRIP -->
+  <section class="subscribe-strip">
+    <div class="subscribe-inner">
+      <span class="mono subscribe-kicker">The List</span>
+      <h3>The Best Bottles<br><span class="italic">Don't Find Themselves.</span></h3>
+      <p class="subscribe-desc">Wine notes, app updates, first dibs on tasting invitations. Sent when there's something worth saying.</p>
+      <a href="https://open.substack.com/pub/catgi" target="_blank" rel="noopener" class="btn btn-filled">Subscribe On Substack</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="contact">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-brand">
+          <img src="assets/logo-white.png" alt="Thirsty Cunt" />
+        </div>
+        <p>A wine lifestyle brand built on the belief that wine should feel social, interesting, and grounded in lived experience.</p>
+      </div>
+      <div>
+        <span class="mono">Explore</span>
+        <ul>
+          <li><a href="#cellar">The App</a></li>
+          <li><a href="#tastings">Tastings</a></li>
+          <li><a href="#substack">The Writing</a></li>
+          <li><a href="https://instagram.com/thirstyc.official" target="_blank" rel="noopener">Instagram</a></li>
+        </ul>
+      </div>
+      <div>
+        <span class="mono">Get In Touch</span>
+        <ul>
+          <li><a href="mailto:hello@thirstyc.com">hello@thirstyc.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Thirsty Cunt</span>
+      <span>Designed With Care</span>
+    </div>
+  </footer>
+
+  <!-- TALLY MODAL -->
+  <div class="tally-modal" id="tallyModal" onclick="if(event.target===this)closeTally()">
+    <div class="tally-modal-inner">
+      <button class="tally-modal-close" onclick="closeTally()" aria-label="Close">×</button>
+      <h3 id="tallyTitle">Toronto <span class="italic">Waitlist.</span></h3>
+      <p class="tally-modal-sub">Add yourself — we'll get in touch when the first tasting is on the books.</p>
+      <!-- TALLY FORMS: replace these URLs with your real Tally embed URLs -->
+      <iframe id="tallyIframe" src="" title="Waitlist form"></iframe>
+    </div>
+  </div>
+
+  <script>
+    // === TALLY WAITLIST CONFIG ===
+    // Replace these with your real Tally form URLs
+    const TALLY_URLS = {
+      toronto: 'https://tally.so/embed/YOUR_TORONTO_FORM_ID?alignLeft=1&hideTitle=1&transparentBackground=1',
+      montreal: 'https://tally.so/embed/YOUR_MONTREAL_FORM_ID?alignLeft=1&hideTitle=1&transparentBackground=1'
+    };
+
+    function openTally(city) {
+      const modal = document.getElementById('tallyModal');
+      const iframe = document.getElementById('tallyIframe');
+      const title = document.getElementById('tallyTitle');
+      const labels = { toronto: 'Toronto', montreal: 'Montréal' };
+      title.innerHTML = `${labels[city]} <span class="italic">Waitlist.</span>`;
+      iframe.src = TALLY_URLS[city];
+      modal.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeTally() {
+      const modal = document.getElementById('tallyModal');
+      modal.classList.remove('open');
+      document.getElementById('tallyIframe').src = '';
+      document.body.style.overflow = '';
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeTally();
+    });
+  </script>
+
+</body>
+</html>
