@@ -519,8 +519,8 @@
       }
     }
 
-    /* Tally Modal */
-    .tally-modal {
+    /* Waitlist Modal & Form */
+    .wl-modal {
       position: fixed;
       inset: 0;
       background: rgba(38, 22, 20, 0.75);
@@ -531,52 +531,246 @@
       padding: 2rem;
     }
 
-    .tally-modal.open { display: flex; }
+    .wl-modal.open { display: flex; }
 
-    .tally-modal-inner {
+    .wl-modal-inner {
       background: var(--cream);
       max-width: 540px;
       width: 100%;
-      padding: 2.5rem;
+      padding: 2.5rem 2.25rem;
       position: relative;
       max-height: 90vh;
       overflow-y: auto;
     }
 
-    .tally-modal-close {
+    .wl-modal-close {
       position: absolute;
-      top: 1rem;
+      top: 0.8rem;
       right: 1rem;
       background: none;
       border: none;
-      font-size: 1.5rem;
+      font-size: 1.6rem;
       cursor: pointer;
       color: var(--vintage);
       line-height: 1;
       padding: 0.5rem;
+      opacity: 0.5;
+      transition: opacity 0.2s ease;
+    }
+    .wl-modal-close:hover { opacity: 1; }
+
+    .wl-kicker {
+      color: var(--vintage);
+      opacity: 0.55;
+      display: block;
+      margin-bottom: 1rem;
     }
 
-    .tally-modal h3 {
+    .wl-modal h3 {
       font-family: 'Instrument Serif', serif;
       font-weight: 400;
-      font-size: 2rem;
+      font-size: 2.2rem;
+      line-height: 1;
       letter-spacing: -0.02em;
+      margin-bottom: 0.6rem;
+      color: var(--vintage);
+    }
+
+    .wl-modal h3 .italic {
+      font-style: italic;
+      color: var(--deep-turquoise);
+    }
+
+    .wl-sub {
+      font-family: 'Instrument Serif', serif;
+      font-style: italic;
+      font-size: 1.1rem;
+      line-height: 1.4;
+      opacity: 0.75;
+      margin-bottom: 2rem;
+      color: var(--vintage);
+    }
+
+    /* Form fields */
+    .wl-field {
+      margin-bottom: 1.3rem;
+    }
+
+    .wl-field label {
+      display: block;
+      font-family: 'IBM Plex Mono', monospace;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 0.7rem;
+      color: var(--vintage);
+      opacity: 0.7;
       margin-bottom: 0.5rem;
     }
 
-    .tally-modal h3 .italic { font-style: italic; }
-
-    .tally-modal-sub {
-      opacity: 0.7;
-      margin-bottom: 1.5rem;
-      font-size: 0.95rem;
-    }
-
-    .tally-modal iframe {
+    .wl-field input[type="text"],
+    .wl-field input[type="email"],
+    .wl-field textarea {
       width: 100%;
-      min-height: 380px;
-      border: none;
+      padding: 0.75rem 0.85rem;
+      background: white;
+      border: 1px solid rgba(38, 22, 20, 0.2);
+      border-radius: 2px;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 300;
+      font-size: 0.95rem;
+      color: var(--vintage);
+      outline: none;
+      transition: border-color 0.2s ease;
     }
+
+    .wl-field input::placeholder,
+    .wl-field textarea::placeholder {
+      font-family: 'Instrument Serif', serif;
+      font-style: italic;
+      color: rgba(38, 22, 20, 0.4);
+    }
+
+    .wl-field input:focus,
+    .wl-field textarea:focus {
+      border-color: var(--deep-turquoise);
+    }
+
+    .wl-field textarea {
+      min-height: 80px;
+      resize: vertical;
+      font-family: 'Outfit', sans-serif;
+    }
+
+    /* Radio choices */
+    .wl-radio-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+
+    .wl-radio {
+      display: flex;
+      align-items: center;
+      padding: 0.6rem 0.85rem;
+      background: white;
+      border: 1px solid rgba(38, 22, 20, 0.2);
+      border-radius: 2px;
+      cursor: pointer;
+      font-size: 0.9rem;
+      transition: all 0.2s ease;
+    }
+
+    .wl-radio:hover {
+      border-color: var(--deep-turquoise);
+    }
+
+    .wl-radio input[type="radio"] {
+      margin-right: 0.7rem;
+      accent-color: var(--deep-turquoise);
+    }
+
+    .wl-radio.checked {
+      border: 1.5px solid var(--deep-turquoise);
+      background: rgba(9, 73, 67, 0.04);
+      color: var(--deep-turquoise);
+    }
+
+    /* Submit button */
+    .wl-submit {
+      display: inline-block;
+      width: auto;
+      background: var(--vintage);
+      color: var(--cream);
+      border: none;
+      padding: 0.85rem 1.5rem;
+      font-family: 'IBM Plex Mono', monospace;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      font-size: 0.72rem;
+      cursor: pointer;
+      transition: background 0.2s ease;
+      margin-top: 0.5rem;
+    }
+
+    .wl-submit:hover {
+      background: var(--burnt-sunset);
+    }
+
+    .wl-submit:disabled {
+      opacity: 0.6;
+      cursor: wait;
+    }
+
+    .wl-footer-note {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.6rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--vintage);
+      opacity: 0.4;
+      margin-top: 1.5rem;
+    }
+
+    /* Thank-you state */
+    .wl-thanks {
+      display: none;
+      text-align: center;
+      padding: 1rem 0;
+    }
+
+    .wl-thanks.show {
+      display: block;
+    }
+
+    .wl-thanks-icon {
+      font-family: 'Instrument Serif', serif;
+      font-style: italic;
+      font-size: 4rem;
+      color: var(--deep-turquoise);
+      line-height: 1;
+      margin-bottom: 1rem;
+    }
+
+    .wl-thanks h4 {
+      font-family: 'Instrument Serif', serif;
+      font-weight: 400;
+      font-size: 2rem;
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.8rem;
+      color: var(--vintage);
+    }
+
+    .wl-thanks h4 .italic {
+      font-style: italic;
+      color: var(--deep-turquoise);
+    }
+
+    .wl-thanks p {
+      font-family: 'Instrument Serif', serif;
+      font-style: italic;
+      font-size: 1.1rem;
+      line-height: 1.5;
+      opacity: 0.8;
+      max-width: 380px;
+      margin: 0 auto;
+      color: var(--vintage);
+    }
+
+    .wl-error {
+      display: none;
+      background: rgba(198, 47, 14, 0.08);
+      border-left: 3px solid var(--burnt-sunset);
+      padding: 0.8rem 1rem;
+      font-size: 0.85rem;
+      color: var(--burnt-sunset);
+      margin-bottom: 1rem;
+    }
+
+    .wl-error.show { display: block; }
+
 
     /* Fade-in entrance */
     .fade-in {
@@ -664,8 +858,8 @@
         <p class="product-description">Small, blind, opinionated. Hosted in restaurants we love in Toronto and Montréal. Pulled together for people curious enough to drink without the label.</p>
         <span class="mono" style="display:block; margin-bottom: 0.8rem; opacity: 0.6; color: var(--vintage);">Join The Waitlist</span>
         <div class="city-buttons">
-          <button type="button" class="btn" onclick="openTally('toronto')">Toronto</button>
-          <button type="button" class="btn" onclick="openTally('montreal')">Montréal</button>
+          <button type="button" class="btn" onclick="openWaitlist('toronto')">Toronto</button>
+          <button type="button" class="btn" onclick="openWaitlist('montreal')">Montréal</button>
         </div>
       </div>
     </div>
@@ -738,45 +932,151 @@
     </div>
   </footer>
 
-  <!-- TALLY MODAL -->
-  <div class="tally-modal" id="tallyModal" onclick="if(event.target===this)closeTally()">
-    <div class="tally-modal-inner">
-      <button class="tally-modal-close" onclick="closeTally()" aria-label="Close">×</button>
-      <h3 id="tallyTitle">Toronto <span class="italic">Waitlist.</span></h3>
-      <p class="tally-modal-sub">Add yourself — we'll get in touch when the first tasting is on the books.</p>
-      <!-- TALLY FORMS: replace these URLs with your real Tally embed URLs -->
-      <iframe id="tallyIframe" src="" title="Waitlist form"></iframe>
+  <!-- WAITLIST MODAL -->
+  <div class="wl-modal" id="wlModal" onclick="if(event.target===this)closeWaitlist()">
+    <div class="wl-modal-inner">
+      <button class="wl-modal-close" onclick="closeWaitlist()" aria-label="Close">×</button>
+
+      <!-- Form state -->
+      <div id="wlFormState">
+        <span class="mono wl-kicker">No. 02 · The Waitlist</span>
+        <h3 id="wlTitle">Toronto <span class="italic">Waitlist.</span></h3>
+        <p class="wl-sub">Small, blind tastings in restaurants we love. Add yourself — we'll write when the first date is on the books.</p>
+
+        <div id="wlError" class="wl-error"></div>
+
+        <form id="wlForm" onsubmit="submitWaitlist(event)">
+          <!-- Web3Forms required fields -->
+          <input type="hidden" name="access_key" value="efde2fd6-8228-4948-bb80-c62ec54ea129">
+          <input type="hidden" name="city" id="wlCity" value="">
+          <input type="hidden" name="subject" id="wlSubject" value="">
+          <input type="hidden" name="from_name" value="Thirsty Cunt Waitlist">
+          <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
+
+          <!-- First name -->
+          <div class="wl-field">
+            <label for="wlName">What should we call you?</label>
+            <input type="text" id="wlName" name="name" placeholder="Your first name" required>
+          </div>
+
+          <!-- Email -->
+          <div class="wl-field">
+            <label for="wlEmail">Where should we reach you?</label>
+            <input type="email" id="wlEmail" name="email" placeholder="your@email.com" required>
+          </div>
+
+          <!-- Preference -->
+          <div class="wl-field">
+            <label>Which way do you lean?</label>
+            <div class="wl-radio-group">
+              <label class="wl-radio"><input type="radio" name="preference" value="Red, mostly" required> Red, mostly</label>
+              <label class="wl-radio"><input type="radio" name="preference" value="White, mostly"> White, mostly</label>
+              <label class="wl-radio"><input type="radio" name="preference" value="Bubbles always"> Bubbles always</label>
+              <label class="wl-radio"><input type="radio" name="preference" value="Anything orange, funky, natural"> Anything orange, funky, natural</label>
+              <label class="wl-radio"><input type="radio" name="preference" value="Whatever's on the table"> Whatever's on the table</label>
+            </div>
+          </div>
+
+          <!-- Optional note -->
+          <div class="wl-field">
+            <label for="wlNote">Anything we should know? <span style="text-transform:none; letter-spacing:0; font-family:'Instrument Serif',serif; font-style:italic; opacity:0.6;">(optional)</span></label>
+            <textarea id="wlNote" name="note" placeholder="A bottle that changed your mind, a guest you'd bring, a question you've never dared ask."></textarea>
+          </div>
+
+          <button type="submit" class="wl-submit" id="wlSubmit">Count Me In →</button>
+          <p class="wl-footer-note">Powered by Web3Forms · We won't spam you.</p>
+        </form>
+      </div>
+
+      <!-- Thank you state -->
+      <div id="wlThanks" class="wl-thanks">
+        <div class="wl-thanks-icon">✓</div>
+        <h4>You're <span class="italic">on the list.</span></h4>
+        <p id="wlThanksMessage">We'll write when the next tasting is on the books.</p>
+        <p class="wl-footer-note" style="margin-top: 2rem;">In the meantime — the Substack is where most of the wine talk lives.</p>
+      </div>
+
     </div>
   </div>
 
   <script>
-    // === TALLY WAITLIST CONFIG ===
-    // Replace these with your real Tally form URLs
-    const TALLY_URLS = {
-      toronto: 'https://tally.so/embed/YOUR_TORONTO_FORM_ID?alignLeft=1&hideTitle=1&transparentBackground=1',
-      montreal: 'https://tally.so/embed/YOUR_MONTREAL_FORM_ID?alignLeft=1&hideTitle=1&transparentBackground=1'
-    };
-
-    function openTally(city) {
-      const modal = document.getElementById('tallyModal');
-      const iframe = document.getElementById('tallyIframe');
-      const title = document.getElementById('tallyTitle');
+    // === WAITLIST WEB3FORMS ===
+    function openWaitlist(city) {
+      const modal = document.getElementById('wlModal');
+      const title = document.getElementById('wlTitle');
+      const cityInput = document.getElementById('wlCity');
+      const subjectInput = document.getElementById('wlSubject');
       const labels = { toronto: 'Toronto', montreal: 'Montréal' };
-      title.innerHTML = `${labels[city]} <span class="italic">Waitlist.</span>`;
-      iframe.src = TALLY_URLS[city];
+      const cityLabel = labels[city];
+
+      title.innerHTML = `${cityLabel} <span class="italic">Waitlist.</span>`;
+      cityInput.value = cityLabel;
+      subjectInput.value = `New ${cityLabel} Waitlist Signup — Thirsty Cunt`;
+
+      // Reset to form state in case it was on thank-you
+      document.getElementById('wlFormState').style.display = 'block';
+      document.getElementById('wlThanks').classList.remove('show');
+      document.getElementById('wlError').classList.remove('show');
+      document.getElementById('wlForm').reset();
+
       modal.classList.add('open');
       document.body.style.overflow = 'hidden';
     }
 
-    function closeTally() {
-      const modal = document.getElementById('tallyModal');
+    function closeWaitlist() {
+      const modal = document.getElementById('wlModal');
       modal.classList.remove('open');
-      document.getElementById('tallyIframe').src = '';
       document.body.style.overflow = '';
     }
 
+    async function submitWaitlist(event) {
+      event.preventDefault();
+      const form = event.target;
+      const submitBtn = document.getElementById('wlSubmit');
+      const errorBox = document.getElementById('wlError');
+
+      errorBox.classList.remove('show');
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Sending...';
+
+      const formData = new FormData(form);
+
+      try {
+        const response = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          body: formData
+        });
+        const data = await response.json();
+
+        if (data.success) {
+          // Switch to thank-you state
+          const city = document.getElementById('wlCity').value;
+          document.getElementById('wlThanksMessage').textContent =
+            `We'll write when the next ${city} tasting is on the books.`;
+          document.getElementById('wlFormState').style.display = 'none';
+          document.getElementById('wlThanks').classList.add('show');
+        } else {
+          throw new Error(data.message || 'Something went wrong.');
+        }
+      } catch (err) {
+        errorBox.textContent = 'Something went wrong. Try again, or email hello@thirstyc.com directly.';
+        errorBox.classList.add('show');
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Count Me In →';
+      }
+    }
+
+    // Radio button visual state
+    document.addEventListener('change', (e) => {
+      if (e.target.matches('.wl-radio input[type="radio"]')) {
+        document.querySelectorAll('.wl-radio').forEach(r => r.classList.remove('checked'));
+        e.target.closest('.wl-radio').classList.add('checked');
+      }
+    });
+
+    // Close on Escape
     document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') closeTally();
+      if (e.key === 'Escape') closeWaitlist();
     });
   </script>
 
