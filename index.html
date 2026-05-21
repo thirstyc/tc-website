@@ -225,8 +225,13 @@
     }
 
     .product-grid.reverse .text-block { order: 2; }
+
+    /* On mobile, force text-block to appear ABOVE visual-block for all sections */
     @media (max-width: 840px) {
-      .product-grid.reverse .text-block { order: 0; }
+      .product-grid .text-block { order: 1; }
+      .product-grid .visual-block { order: 2; }
+      .product-grid.reverse .text-block { order: 1; }
+      .product-grid.reverse .visual-block { order: 2; }
     }
 
     .product .mono {
