@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vos choix en matière de confidentialité — Thirsty Cellar</title>
+  <meta name="description" content="Exercez vos droits sur vos données personnelles dans l'application Thirsty Cellar." />
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="icon" type="image/png" href="assets/logo-turquoise.png" />
+  <link rel="apple-touch-icon" href="assets/logo-turquoise.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=IBM+Plex+Mono:wght@400;500&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --vintage: #261614;
+      --mineral: #ADBDCC;
+      --deep-turquoise: #094943;
+      --turquoise: #009C8E;
+      --burnt-sunset: #C62F0E;
+      --dark-cherries: #700001;
+      --rose: #EDD9DF;
+      --cream: #faf7f2;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 300;
+      color: var(--vintage);
+      background: var(--cream);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .serif {
+      font-family: 'Instrument Serif', serif;
+      font-weight: 400;
+      letter-spacing: -0.01em;
+    }
+
+    .mono {
+      font-family: 'IBM Plex Mono', monospace;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 0.72rem;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 100;
+      background: rgba(250, 247, 242, 0.85);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(38, 22, 20, 0.08);
+    }
+
+    nav .logo {
+      display: block;
+      line-height: 0;
+    }
+
+    nav .logo img {
+      height: 80px;
+      width: auto;
+      display: block;
+    }
+
+    @media (max-width: 640px) {
+      nav .logo img { height: 64px; }
+    }
+
+    .policy {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 10rem 2rem 6rem;
+    }
+
+    .policy-lang {
+      text-align: right;
+      margin-bottom: 1rem;
+    }
+
+    .policy-lang a {
+      font-family: 'IBM Plex Mono', monospace;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 0.68rem;
+      color: var(--deep-turquoise);
+      text-decoration: none;
+      opacity: 0.6;
+      transition: opacity 0.2s ease;
+    }
+
+    .policy-lang a:hover {
+      opacity: 1;
+    }
+
+    .policy-eyebrow {
+      color: var(--vintage);
+      opacity: 0.6;
+      margin-bottom: 1.5rem;
+      display: block;
+    }
+
+    .policy h1 {
+      font-family: 'Instrument Serif', serif;
+      font-weight: 400;
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      line-height: 1.05;
+      letter-spacing: -0.025em;
+      color: var(--vintage);
+      margin-bottom: 1rem;
+    }
+
+    .policy h1 .italic {
+      font-style: italic;
+      color: var(--deep-turquoise);
+    }
+
+    .policy-date {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      opacity: 0.5;
+      margin-bottom: 3rem;
+      display: block;
+    }
+
+    .policy-intro {
+      font-family: 'Instrument Serif', serif;
+      font-size: 1.25rem;
+      line-height: 1.5;
+      margin-bottom: 3rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid rgba(38, 22, 20, 0.12);
+    }
+
+    .policy-intro a {
+      color: var(--deep-turquoise);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+      transition: opacity 0.2s ease;
+    }
+
+    .policy-intro a:hover {
+      opacity: 0.7;
+    }
+
+    .policy h2 {
+      font-family: 'Instrument Serif', serif;
+      font-weight: 400;
+      font-size: 1.8rem;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      color: var(--vintage);
+      margin: 3rem 0 1rem;
+    }
+
+    .policy h3 {
+      font-family: 'IBM Plex Mono', monospace;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 0.72rem;
+      color: var(--burnt-sunset);
+      margin: 2rem 0 0.8rem;
+    }
+
+    .policy p {
+      margin-bottom: 1rem;
+      font-size: 1rem;
+      line-height: 1.7;
+    }
+
+    .policy ul {
+      margin: 0.5rem 0 1.5rem 1.5rem;
+      font-size: 1rem;
+      line-height: 1.7;
+    }
+
+    .policy li {
+      margin-bottom: 0.4rem;
+    }
+
+    .policy a {
+      color: var(--deep-turquoise);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+      transition: opacity 0.2s ease;
+    }
+
+    .policy a:hover {
+      opacity: 0.7;
+    }
+
+    .policy strong {
+      font-weight: 500;
+    }
+
+    .policy-section {
+      padding-bottom: 2rem;
+      margin-bottom: 1rem;
+      border-bottom: 1px solid rgba(38, 22, 20, 0.08);
+    }
+
+    .policy-section:last-of-type {
+      border-bottom: none;
+    }
+
+    .policy-contact {
+      background: rgba(9, 73, 67, 0.05);
+      padding: 1.5rem 1.8rem;
+      margin: 2rem 0;
+      border-left: 3px solid var(--deep-turquoise);
+    }
+
+    .policy-contact p {
+      margin-bottom: 0.4rem;
+    }
+
+    .policy-contact p:last-child {
+      margin-bottom: 0;
+    }
+
+    .policy-cta {
+      text-align: center;
+      padding: 2rem 0 0;
+    }
+
+    .policy-cta a {
+      font-family: 'IBM Plex Mono', monospace;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 0.72rem;
+      color: var(--deep-turquoise);
+      text-decoration: none;
+      border: 1px solid var(--deep-turquoise);
+      padding: 0.85rem 1.5rem;
+      transition: all 0.25s ease;
+      display: inline-block;
+    }
+
+    .policy-cta a:hover {
+      background: var(--deep-turquoise);
+      color: var(--cream);
+      opacity: 1;
+    }
+
+    footer {
+      background: var(--vintage);
+      color: var(--cream);
+      padding: 3rem 2rem;
+    }
+
+    .footer-bottom {
+      max-width: 780px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      opacity: 0.5;
+    }
+
+    @media (max-width: 600px) {
+      .footer-bottom {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="/" class="logo" aria-label="Thirsty Cunt">
+      <img src="assets/logo-turquoise.png" alt="Thirsty Cunt" />
+    </a>
+  </nav>
+
+  <main class="policy">
+    <div class="policy-lang">
+      <a href="privacy-choices-en.html">English version</a>
+    </div>
+
+    <span class="mono policy-eyebrow">Vos droits</span>
+    <h1>Vos choix en matière de <span class="italic">confidentialité.</span></h1>
+    <span class="policy-date">Dernière mise à jour : 24 mai 2026</span>
+
+    <p class="policy-intro">
+      Chez Thirsty Cellar, nous croyons que vos données vous appartiennent. Cette page rassemble toutes les actions que vous pouvez exercer sur vos informations personnelles, en quelques clics ou par un simple courriel.<br><br>
+      Pour comprendre <strong>quelles</strong> données nous collectons et <strong>pourquoi</strong>, consultez notre <a href="politique-de-confidentialite.html">Politique de confidentialité complète</a>.
+    </p>
+
+    <!-- 1. Accéder à vos données -->
+    <div class="policy-section">
+      <h2>1. Accéder à vos données</h2>
+      <p>Vous pouvez à tout moment demander une copie de toutes les données personnelles que nous détenons à votre sujet.</p>
+      <h3>Comment</h3>
+      <ul>
+        <li>Envoyez un courriel à <a href="mailto:dev@thirstyc.com">dev@thirstyc.com</a></li>
+        <li>Objet : « Demande d'accès à mes données »</li>
+        <li>Délai de réponse : 30 jours maximum</li>
+        <li>Format de livraison : fichier JSON structuré (lisible et portable)</li>
+      </ul>
+    </div>
+
+    <!-- 2. Corriger vos données -->
+    <div class="policy-section">
+      <h2>2. Corriger vos données</h2>
+      <p>Si certaines informations à votre sujet sont inexactes (nom mal orthographié, courriel obsolète, etc.), vous pouvez les corriger.</p>
+      <h3>Comment</h3>
+      <ul>
+        <li>Directement dans l'application Thirsty Cellar : Profil → Modifier</li>
+        <li>Ou par courriel à <a href="mailto:dev@thirstyc.com">dev@thirstyc.com</a> avec la correction demandée</li>
+      </ul>
+    </div>
+
+    <!-- 3. Supprimer votre compte et vos données -->
+    <div class="policy-section">
+      <h2>3. Supprimer votre compte et vos données</h2>
+      <p>Vous pouvez demander la suppression complète de votre compte et de toutes vos données associées. Cette action est irréversible.</p>
+      <h3>Comment</h3>
+      <ul>
+        <li>Dans l'application : Profil → Paramètres → Supprimer mon compte</li>
+        <li>Ou par courriel à <a href="mailto:dev@thirstyc.com">dev@thirstyc.com</a> avec l'objet « Suppression de mon compte »</li>
+        <li>Délai d'exécution : 30 jours maximum</li>
+        <li>Données conservées après suppression : aucune, sauf obligations légales (ex. registres de facturation Apple, conservés conformément aux lois fiscales)</li>
+      </ul>
+    </div>
+
+    <!-- 4. Désactiver l'analyse d'usage (PostHog) -->
+    <div class="policy-section">
+      <h2>4. Désactiver l'analyse d'usage (PostHog)</h2>
+      <p>Nous utilisons PostHog (basé en Allemagne, conforme RGPD) pour comprendre comment l'application est utilisée et l'améliorer. Vous pouvez désactiver cette collecte à tout moment.</p>
+      <h3>Comment</h3>
+      <ul>
+        <li>Dans l'application : Profil → Paramètres → Confidentialité → Désactiver l'analyse d'usage</li>
+        <li>Le rapport de crashs (Sentry) continue de fonctionner — il est essentiel pour corriger les bugs et n'identifie pas individuellement les utilisateurs</li>
+      </ul>
+    </div>
+
+    <!-- 5. Refuser l'analyse d'étiquettes par IA -->
+    <div class="policy-section">
+      <h2>5. Refuser l'analyse d'étiquettes par IA</h2>
+      <p>La fonctionnalité de scan d'étiquettes envoie temporairement la photo à un service d'IA (Qwen, basé en Chine) pour identification. La photo n'est <strong>pas</strong> conservée.</p>
+      <h3>Comment</h3>
+      <ul>
+        <li>Vous pouvez choisir de ne jamais utiliser cette fonctionnalité (saisie manuelle des informations de vin)</li>
+        <li>Avant chaque scan, l'application demande votre consentement explicite</li>
+        <li>Vous pouvez révoquer ce consentement à tout moment dans : Profil → Paramètres → Confidentialité</li>
+      </ul>
+    </div>
+
+    <!-- 6. Télécharger vos données (portabilité) -->
+    <div class="policy-section">
+      <h2>6. Télécharger vos données (portabilité)</h2>
+      <p>Vous avez le droit de recevoir vos données dans un format structuré et portable, pour les transférer vers un autre service si vous le souhaitez.</p>
+      <h3>Comment</h3>
+      <ul>
+        <li>Envoyez un courriel à <a href="mailto:dev@thirstyc.com">dev@thirstyc.com</a></li>
+        <li>Objet : « Demande de portabilité de mes données »</li>
+        <li>Format de livraison : fichier JSON structuré</li>
+        <li>Délai : 30 jours maximum</li>
+      </ul>
+    </div>
+
+    <!-- 7. Refuser la vente de vos données -->
+    <div class="policy-section">
+      <h2>7. Refuser la vente de vos données (CCPA/CPRA, Californie)</h2>
+      <p>Thirsty Cellar ne vend <strong>aucune</strong> de vos données personnelles à des tiers, peu importe le contexte. Cette pratique est interdite chez nous, indépendamment des exigences californiennes.</p>
+      <p>Si vous résidez en Californie et souhaitez confirmation formelle de ce statut, écrivez à <a href="mailto:dev@thirstyc.com">dev@thirstyc.com</a> avec l'objet « Confirmation Do Not Sell ».</p>
+    </div>
+
+    <!-- 8. Retirer votre consentement -->
+    <div class="policy-section">
+      <h2>8. Retirer votre consentement</h2>
+      <p>Pour toutes les données traitées sur la base de votre consentement (analytics, scan d'étiquettes IA, etc.), vous pouvez retirer ce consentement à tout moment.</p>
+      <h3>Comment</h3>
+      <ul>
+        <li>Pour les analytics : voir Section 4</li>
+        <li>Pour le scan d'étiquettes : voir Section 5</li>
+        <li>Pour tout autre consentement : courriel à <a href="mailto:dev@thirstyc.com">dev@thirstyc.com</a></li>
+      </ul>
+      <p>Le retrait du consentement n'affecte pas la légalité des traitements effectués avant ce retrait.</p>
+    </div>
+
+    <!-- 9. Déposer une réclamation -->
+    <div class="policy-section">
+      <h2>9. Déposer une réclamation</h2>
+      <p>Si vous estimez que vos droits ne sont pas respectés, vous pouvez déposer une plainte auprès de l'autorité compétente :</p>
+      <ul>
+        <li><strong>Québec :</strong> Commission d'accès à l'information du Québec (CAI) — <a href="https://www.cai.gouv.qc.ca/" target="_blank" rel="noopener">cai.gouv.qc.ca</a></li>
+        <li><strong>France :</strong> Commission nationale de l'informatique et des libertés (CNIL) — <a href="https://www.cnil.fr/" target="_blank" rel="noopener">cnil.fr</a></li>
+        <li><strong>Union européenne :</strong> autorité de protection des données de votre pays</li>
+        <li><strong>Californie :</strong> California Privacy Protection Agency (CPPA) — <a href="https://cppa.ca.gov/" target="_blank" rel="noopener">cppa.ca.gov</a></li>
+      </ul>
+    </div>
+
+    <!-- 10. Nous contacter -->
+    <div class="policy-section">
+      <h2>10. Nous contacter</h2>
+      <p>Pour toute question, demande ou inquiétude relative à vos données personnelles :</p>
+      <div class="policy-contact">
+        <p><strong>Catherine Gignac</strong></p>
+        <p>Thirsty Cunt / Thirsty Cellar</p>
+        <p>Courriel : <a href="mailto:dev@thirstyc.com">dev@thirstyc.com</a></p>
+      </div>
+      <p>Nous nous engageons à répondre à toute demande dans un délai maximum de 30 jours.</p>
+    </div>
+
+    <div class="policy-cta">
+      <a href="politique-de-confidentialite.html">Consulter la Politique de confidentialité complète</a>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Thirsty Cunt</span>
+      <span><a href="/" style="color: inherit; text-decoration: none; opacity: 0.85;">Retour au site</a></span>
+    </div>
+  </footer>
+
+</body>
+</html>
