@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Thirsty Cellar</title>
+  <meta name="description" content="Contactez l'équipe Thirsty Cellar pour toute question, assistance ou commentaire sur l'application." />
+  <link rel="icon" type="image/png" href="assets/logo-turquoise.png" />
+  <link rel="apple-touch-icon" href="assets/logo-turquoise.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=IBM+Plex+Mono:wght@400;500&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --vintage: #261614;
+      --mineral: #ADBDCC;
+      --deep-turquoise: #094943;
+      --turquoise: #009C8E;
+      --burnt-sunset: #C62F0E;
+      --dark-cherries: #700001;
+      --rose: #EDD9DF;
+      --cream: #faf7f2;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 300;
+      color: var(--vintage);
+      background: var(--cream);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .serif {
+      font-family: 'Instrument Serif', serif;
+      font-weight: 400;
+      letter-spacing: -0.01em;
+    }
+
+    .mono {
+      font-family: 'IBM Plex Mono', monospace;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 0.72rem;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 100;
+      background: rgba(250, 247, 242, 0.85);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(38, 22, 20, 0.08);
+    }
+
+    nav .logo {
+      display: block;
+      line-height: 0;
+    }
+
+    nav .logo img {
+      height: 80px;
+      width: auto;
+      display: block;
+    }
+
+    @media (max-width: 640px) {
+      nav .logo img { height: 64px; }
+    }
+
+    .policy {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 10rem 2rem 6rem;
+    }
+
+    .policy-lang {
+      text-align: right;
+      margin-bottom: 1rem;
+    }
+
+    .policy-lang a {
+      font-family: 'IBM Plex Mono', monospace;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 0.68rem;
+      color: var(--deep-turquoise);
+      text-decoration: none;
+      opacity: 0.6;
+      transition: opacity 0.2s ease;
+    }
+
+    .policy-lang a:hover {
+      opacity: 1;
+    }
+
+    .policy-eyebrow {
+      color: var(--vintage);
+      opacity: 0.6;
+      margin-bottom: 1.5rem;
+      display: block;
+    }
+
+    .policy h1 {
+      font-family: 'Instrument Serif', serif;
+      font-weight: 400;
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      line-height: 1.05;
+      letter-spacing: -0.025em;
+      color: var(--vintage);
+      margin-bottom: 1rem;
+    }
+
+    .policy h1 .italic {
+      font-style: italic;
+      color: var(--deep-turquoise);
+    }
+
+    .policy-date {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      opacity: 0.5;
+      margin-bottom: 3rem;
+      display: block;
+    }
+
+    .policy-intro {
+      font-family: 'Instrument Serif', serif;
+      font-size: 1.25rem;
+      line-height: 1.5;
+      margin-bottom: 3rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid rgba(38, 22, 20, 0.12);
+    }
+
+    .policy-intro a {
+      color: var(--deep-turquoise);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+      transition: opacity 0.2s ease;
+    }
+
+    .policy-intro a:hover {
+      opacity: 0.7;
+    }
+
+    .policy h2 {
+      font-family: 'Instrument Serif', serif;
+      font-weight: 400;
+      font-size: 1.8rem;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      color: var(--vintage);
+      margin: 3rem 0 1rem;
+    }
+
+    .policy h3 {
+      font-family: 'IBM Plex Mono', monospace;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 0.72rem;
+      color: var(--burnt-sunset);
+      margin: 2rem 0 0.8rem;
+    }
+
+    .policy p {
+      margin-bottom: 1rem;
+      font-size: 1rem;
+      line-height: 1.7;
+    }
+
+    .policy ul {
+      margin: 0.5rem 0 1.5rem 1.5rem;
+      font-size: 1rem;
+      line-height: 1.7;
+    }
+
+    .policy li {
+      margin-bottom: 0.4rem;
+    }
+
+    .policy a {
+      color: var(--deep-turquoise);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+      transition: opacity 0.2s ease;
+    }
+
+    .policy a:hover {
+      opacity: 0.7;
+    }
+
+    .policy strong {
+      font-weight: 500;
+    }
+
+    .policy-section {
+      padding-bottom: 2rem;
+      margin-bottom: 1rem;
+      border-bottom: 1px solid rgba(38, 22, 20, 0.08);
+    }
+
+    .policy-section:last-of-type {
+      border-bottom: none;
+    }
+
+    .policy-contact {
+      background: rgba(9, 73, 67, 0.05);
+      padding: 1.5rem 1.8rem;
+      margin: 2rem 0;
+      border-left: 3px solid var(--deep-turquoise);
+    }
+
+    .policy-contact p {
+      margin-bottom: 0.4rem;
+    }
+
+    .policy-contact p:last-child {
+      margin-bottom: 0;
+    }
+
+    .policy-cta {
+      text-align: center;
+      padding: 2rem 0 0;
+    }
+
+    .policy-cta a {
+      font-family: 'IBM Plex Mono', monospace;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 0.72rem;
+      color: var(--deep-turquoise);
+      text-decoration: none;
+      border: 1px solid var(--deep-turquoise);
+      padding: 0.85rem 1.5rem;
+      transition: all 0.25s ease;
+      display: inline-block;
+    }
+
+    .policy-cta a:hover {
+      background: var(--deep-turquoise);
+      color: var(--cream);
+      opacity: 1;
+    }
+
+    footer {
+      background: var(--vintage);
+      color: var(--cream);
+      padding: 3rem 2rem;
+    }
+
+    .footer-bottom {
+      max-width: 780px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      opacity: 0.5;
+    }
+
+    @media (max-width: 600px) {
+      .footer-bottom {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="/" class="logo" aria-label="Thirsty Cunt">
+      <img src="assets/logo-turquoise.png" alt="Thirsty Cunt" />
+    </a>
+  </nav>
+
+  <main class="policy">
+    <div class="policy-lang">
+      <a href="contact.html">English version</a>
+    </div>
+
+    <span class="mono policy-eyebrow">Assistance</span>
+    <h1>Nous <span class="italic">contacter.</span></h1>
+    <span class="policy-date">Derni&egrave;re mise &agrave; jour : 24/05/2026</span>
+
+    <p class="policy-intro">
+      Une question sur Thirsty Cellar, besoin d'aide avec l'application, ou simplement envie de nous &eacute;crire&nbsp;? Nous serions ravis de vous lire. Nous r&eacute;pondons g&eacute;n&eacute;ralement sous 48 heures.
+    </p>
+
+    <div class="policy-section">
+      <h2>Nous joindre</h2>
+      <p>Pour toute question, commentaire, signalement de bug ou demande d'assistance concernant l'application Thirsty Cellar&nbsp;:</p>
+      <div class="policy-contact">
+        <p><strong>Catherine Gignac</strong></p>
+        <p>Thirsty Cunt / Thirsty Cellar</p>
+        <p>Courriel&nbsp;: <a href="mailto:dev@thirstyc.com">dev@thirstyc.com</a></p>
+      </div>
+    </div>
+
+    <div class="policy-section">
+      <h2>Assistance technique</h2>
+      <p>Si vous rencontrez un probl&egrave;me avec l'application Thirsty Cellar, veuillez inclure les informations suivantes dans votre courriel afin de nous aider &agrave; vous r&eacute;pondre plus rapidement&nbsp;:</p>
+      <ul>
+        <li>Le mod&egrave;le de votre appareil et la version d'iOS</li>
+        <li>Une description du probl&egrave;me rencontr&eacute;</li>
+        <li>Des captures d'&eacute;cran, si possible</li>
+      </ul>
+    </div>
+
+    <div class="policy-section">
+      <h2>Vie priv&eacute;e et donn&eacute;es personnelles</h2>
+      <p>Pour les demandes li&eacute;es &agrave; vos donn&eacute;es personnelles (acc&egrave;s, rectification, suppression, portabilit&eacute;), veuillez consulter notre page d&eacute;di&eacute;e&nbsp;:</p>
+      <div class="policy-cta" style="text-align: left; padding: 1rem 0 0;">
+        <a href="privacy-choices.html">Vos choix de confidentialit&eacute;</a>
+      </div>
+      <p style="margin-top: 1.5rem;">Vous pouvez &eacute;galement consulter notre <a href="politique-de-confidentialite.html">Politique de confidentialit&eacute;</a> pour conna&icirc;tre en d&eacute;tail la mani&egrave;re dont nous traitons vos donn&eacute;es.</p>
+    </div>
+
+    <div class="policy-section">
+      <h2>D&eacute;lai de r&eacute;ponse</h2>
+      <p>Nous nous engageons &agrave; r&eacute;pondre &agrave; toutes les demandes sous <strong>48 heures</strong>. Pour les demandes relatives aux donn&eacute;es personnelles (acc&egrave;s, suppression, portabilit&eacute;), le d&eacute;lai maximal de traitement est de <strong>30 jours</strong>, conform&eacute;ment aux lois applicables en mati&egrave;re de protection de la vie priv&eacute;e.</p>
+    </div>
+
+    <div class="policy-cta">
+      <a href="/">Retour &agrave; Thirsty Cellar</a>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Thirsty Cunt</span>
+      <span><a href="/" style="color: inherit; text-decoration: none; opacity: 0.85;">Retour au site</a></span>
+    </div>
+  </footer>
+
+</body>
+</html>
