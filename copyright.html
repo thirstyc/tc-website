@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Copyright — Thirsty Cellar</title>
+  <meta name="description" content="Copyright and intellectual property information for Thirsty Cellar." />
+  <link rel="icon" type="image/png" href="assets/logo-turquoise.png" />
+  <link rel="apple-touch-icon" href="assets/logo-turquoise.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=IBM+Plex+Mono:wght@400;500&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --vintage: #261614;
+      --mineral: #ADBDCC;
+      --deep-turquoise: #094943;
+      --turquoise: #009C8E;
+      --burnt-sunset: #C62F0E;
+      --dark-cherries: #700001;
+      --rose: #EDD9DF;
+      --cream: #faf7f2;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 300;
+      color: var(--vintage);
+      background: var(--cream);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .serif {
+      font-family: 'Instrument Serif', serif;
+      font-weight: 400;
+      letter-spacing: -0.01em;
+    }
+
+    .mono {
+      font-family: 'IBM Plex Mono', monospace;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 0.72rem;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 100;
+      background: rgba(250, 247, 242, 0.85);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(38, 22, 20, 0.08);
+    }
+
+    nav .logo {
+      display: block;
+      line-height: 0;
+    }
+
+    nav .logo img {
+      height: 80px;
+      width: auto;
+      display: block;
+    }
+
+    @media (max-width: 640px) {
+      nav .logo img { height: 64px; }
+    }
+
+    .policy {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 10rem 2rem 6rem;
+    }
+
+    .policy-eyebrow {
+      color: var(--vintage);
+      opacity: 0.6;
+      margin-bottom: 1.5rem;
+      display: block;
+    }
+
+    .policy h1 {
+      font-family: 'Instrument Serif', serif;
+      font-weight: 400;
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      line-height: 1.05;
+      letter-spacing: -0.025em;
+      color: var(--vintage);
+      margin-bottom: 1rem;
+    }
+
+    .policy h1 .italic {
+      font-style: italic;
+      color: var(--deep-turquoise);
+    }
+
+    .policy-date {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      opacity: 0.5;
+      margin-bottom: 3rem;
+      display: block;
+    }
+
+    .policy-intro {
+      font-family: 'Instrument Serif', serif;
+      font-size: 1.25rem;
+      line-height: 1.5;
+      margin-bottom: 3rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid rgba(38, 22, 20, 0.12);
+    }
+
+    .policy h2 {
+      font-family: 'Instrument Serif', serif;
+      font-weight: 400;
+      font-size: 1.8rem;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      color: var(--vintage);
+      margin: 3rem 0 1rem;
+    }
+
+    .policy p {
+      margin-bottom: 1rem;
+      font-size: 1rem;
+      line-height: 1.7;
+    }
+
+    .policy ul {
+      margin: 0.5rem 0 1.5rem 1.5rem;
+      font-size: 1rem;
+      line-height: 1.7;
+    }
+
+    .policy li {
+      margin-bottom: 0.4rem;
+    }
+
+    .policy a {
+      color: var(--deep-turquoise);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+      transition: opacity 0.2s ease;
+    }
+
+    .policy a:hover {
+      opacity: 0.7;
+    }
+
+    .policy strong {
+      font-weight: 500;
+    }
+
+    .policy-section {
+      padding-bottom: 2rem;
+      margin-bottom: 1rem;
+      border-bottom: 1px solid rgba(38, 22, 20, 0.08);
+    }
+
+    .policy-section:last-of-type {
+      border-bottom: none;
+    }
+
+    .policy-contact {
+      background: rgba(9, 73, 67, 0.05);
+      padding: 1.5rem 1.8rem;
+      margin: 2rem 0;
+      border-left: 3px solid var(--deep-turquoise);
+    }
+
+    .policy-contact p {
+      margin-bottom: 0.4rem;
+    }
+
+    .policy-contact p:last-child {
+      margin-bottom: 0;
+    }
+
+    .policy-cta {
+      text-align: center;
+      padding: 2rem 0 0;
+    }
+
+    .policy-cta a {
+      font-family: 'IBM Plex Mono', monospace;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 0.72rem;
+      color: var(--deep-turquoise);
+      text-decoration: none;
+      border: 1px solid var(--deep-turquoise);
+      padding: 0.85rem 1.5rem;
+      transition: all 0.25s ease;
+      display: inline-block;
+    }
+
+    .policy-cta a:hover {
+      background: var(--deep-turquoise);
+      color: var(--cream);
+      opacity: 1;
+    }
+
+    footer {
+      background: var(--vintage);
+      color: var(--cream);
+      padding: 3rem 2rem;
+    }
+
+    .footer-bottom {
+      max-width: 780px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      opacity: 0.5;
+    }
+
+    @media (max-width: 600px) {
+      .footer-bottom {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="/" class="logo" aria-label="Thirsty Cunt">
+      <img src="assets/logo-turquoise.png" alt="Thirsty Cunt" />
+    </a>
+  </nav>
+
+  <main class="policy">
+    <span class="mono policy-eyebrow">Legal</span>
+    <h1>Copyright <span class="italic">Notice.</span></h1>
+    <span class="policy-date">Last updated: 05/24/2026</span>
+
+    <p class="policy-intro">
+      All content, design, and intellectual property associated with Thirsty Cellar are owned by Catherine Gignac, operating under the trade names Thirsty Cunt and Thirsty Cellar.
+    </p>
+
+    <div class="policy-section">
+      <h2>Ownership</h2>
+      <p>&copy; 2024–2026 Catherine Gignac. All rights reserved.</p>
+      <p>The Thirsty Cellar application, the Thirsty Cunt brand, and all associated content — including but not limited to text, graphics, logos, icons, images, and software — are the exclusive property of Catherine Gignac.</p>
+    </div>
+
+    <div class="policy-section">
+      <h2>Permitted Use</h2>
+      <p>You may use the Thirsty Cellar application in accordance with the terms available on the App Store. No part of this website or application may be reproduced, distributed, or transmitted in any form without prior written permission, except as permitted by applicable copyright law.</p>
+    </div>
+
+    <div class="policy-section">
+      <h2>Third-Party Content</h2>
+      <p>Wine label images, tasting notes, and other user-generated content remain the property of their respective owners. Thirsty Cellar claims no ownership over content created by its users.</p>
+    </div>
+
+    <div class="policy-section">
+      <h2>Contact</h2>
+      <p>For any questions regarding copyright or intellectual property:</p>
+      <div class="policy-contact">
+        <p><strong>Catherine Gignac</strong></p>
+        <p>Thirsty Cunt / Thirsty Cellar</p>
+        <p>Email: <a href="mailto:dev@thirstyc.com">dev@thirstyc.com</a></p>
+      </div>
+    </div>
+
+    <div class="policy-cta">
+      <a href="/">Back to Thirsty Cellar</a>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Thirsty Cunt</span>
+      <span><a href="/" style="color: inherit; text-decoration: none; opacity: 0.85;">Back to site</a></span>
+    </div>
+  </footer>
+
+</body>
+</html>
