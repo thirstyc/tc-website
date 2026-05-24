@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — Thirsty Cellar</title>
+  <meta name="description" content="Privacy policy for the Thirsty Cellar app by Thirsty Cunt." />
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="icon" type="image/png" href="assets/logo-turquoise.png" />
+  <link rel="apple-touch-icon" href="assets/logo-turquoise.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=IBM+Plex+Mono:wght@400;500&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --vintage: #261614;
+      --mineral: #ADBDCC;
+      --deep-turquoise: #094943;
+      --turquoise: #009C8E;
+      --burnt-sunset: #C62F0E;
+      --dark-cherries: #700001;
+      --rose: #EDD9DF;
+      --cream: #faf7f2;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 300;
+      color: var(--vintage);
+      background: var(--cream);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .serif {
+      font-family: 'Instrument Serif', serif;
+      font-weight: 400;
+      letter-spacing: -0.01em;
+    }
+
+    .mono {
+      font-family: 'IBM Plex Mono', monospace;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 0.72rem;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 100;
+      background: rgba(250, 247, 242, 0.85);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(38, 22, 20, 0.08);
+    }
+
+    nav .logo {
+      display: block;
+      line-height: 0;
+    }
+
+    nav .logo img {
+      height: 80px;
+      width: auto;
+      display: block;
+    }
+
+    @media (max-width: 640px) {
+      nav .logo img { height: 64px; }
+    }
+
+    .policy {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 10rem 2rem 6rem;
+    }
+
+    .policy-eyebrow {
+      color: var(--vintage);
+      opacity: 0.6;
+      margin-bottom: 1.5rem;
+      display: block;
+    }
+
+    .policy h1 {
+      font-family: 'Instrument Serif', serif;
+      font-weight: 400;
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      line-height: 1.05;
+      letter-spacing: -0.025em;
+      color: var(--vintage);
+      margin-bottom: 1rem;
+    }
+
+    .policy h1 .italic {
+      font-style: italic;
+      color: var(--deep-turquoise);
+    }
+
+    .policy-date {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      opacity: 0.5;
+      margin-bottom: 3rem;
+      display: block;
+    }
+
+    .policy-intro {
+      font-family: 'Instrument Serif', serif;
+      font-size: 1.25rem;
+      line-height: 1.5;
+      margin-bottom: 3rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid rgba(38, 22, 20, 0.12);
+    }
+
+    .policy h2 {
+      font-family: 'Instrument Serif', serif;
+      font-weight: 400;
+      font-size: 1.8rem;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      color: var(--vintage);
+      margin: 3rem 0 1rem;
+    }
+
+    .policy h3 {
+      font-family: 'IBM Plex Mono', monospace;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 0.72rem;
+      color: var(--burnt-sunset);
+      margin: 2rem 0 0.8rem;
+    }
+
+    .policy p {
+      margin-bottom: 1rem;
+      font-size: 1rem;
+      line-height: 1.7;
+    }
+
+    .policy ul {
+      margin: 0.5rem 0 1.5rem 1.5rem;
+      font-size: 1rem;
+      line-height: 1.7;
+    }
+
+    .policy li {
+      margin-bottom: 0.4rem;
+    }
+
+    .policy a {
+      color: var(--deep-turquoise);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+      transition: opacity 0.2s ease;
+    }
+
+    .policy a:hover {
+      opacity: 0.7;
+    }
+
+    .policy strong {
+      font-weight: 500;
+    }
+
+    .policy-section {
+      padding-bottom: 2rem;
+      margin-bottom: 1rem;
+      border-bottom: 1px solid rgba(38, 22, 20, 0.08);
+    }
+
+    .policy-section:last-of-type {
+      border-bottom: none;
+    }
+
+    .policy-contact {
+      background: rgba(9, 73, 67, 0.05);
+      padding: 1.5rem 1.8rem;
+      margin: 2rem 0;
+      border-left: 3px solid var(--deep-turquoise);
+    }
+
+    .policy-contact p {
+      margin-bottom: 0.4rem;
+    }
+
+    .policy-contact p:last-child {
+      margin-bottom: 0;
+    }
+
+    footer {
+      background: var(--vintage);
+      color: var(--cream);
+      padding: 3rem 2rem;
+    }
+
+    .footer-bottom {
+      max-width: 780px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      opacity: 0.5;
+    }
+
+    @media (max-width: 600px) {
+      .footer-bottom {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="/" class="logo" aria-label="Thirsty Cunt">
+      <img src="assets/logo-turquoise.png" alt="Thirsty Cunt" />
+    </a>
+  </nav>
+
+  <main class="policy">
+    <span class="mono policy-eyebrow">Legal</span>
+    <h1>Privacy <span class="italic">Policy.</span></h1>
+    <span class="policy-date">Last updated: May 24, 2025</span>
+
+    <p class="policy-intro">
+      This privacy policy describes how Thirsty Cunt ("we," "our," "us") collects, uses, and protects the personal information of users of the Thirsty Cellar mobile application (the "App"), available on iOS.
+    </p>
+
+    <!-- 1. Data Controller -->
+    <div class="policy-section">
+      <h2>1. Data Controller</h2>
+      <p>The data controller responsible for your personal information is:</p>
+      <div class="policy-contact">
+        <p><strong>Catherine Gignac</strong></p>
+        <p>Thirsty Cunt</p>
+        <p>Email: <a href="mailto:dev@thirstyc.com">dev@thirstyc.com</a></p>
+      </div>
+    </div>
+
+    <!-- 2. Data We Collect -->
+    <div class="policy-section">
+      <h2>2. Data We Collect</h2>
+      <p>We collect the following categories of information when you use the App:</p>
+
+      <h3>Information you provide</h3>
+      <ul>
+        <li>Email address and account information (upon registration)</li>
+        <li>Wine bottle data (name, vintage, region, tasting notes, photos)</li>
+        <li>App preferences and settings</li>
+      </ul>
+
+      <h3>Information collected automatically</h3>
+      <ul>
+        <li>Device identifiers and technical information (model, iOS version, language)</li>
+        <li>Usage and interaction data (features used, frequency of use)</li>
+        <li>Diagnostic and performance data (crash reports)</li>
+      </ul>
+
+      <h3>Camera data</h3>
+      <ul>
+        <li>The App may access your camera to scan wine labels. Images are processed to extract relevant information and are not retained beyond processing, unless you choose to save a photo to your cellar.</li>
+      </ul>
+    </div>
+
+    <!-- 3. How We Use Your Data -->
+    <div class="policy-section">
+      <h2>3. How We Use Your Data</h2>
+      <p>Your data is used for the following purposes:</p>
+      <ul>
+        <li>Provide, maintain, and improve the App's features</li>
+        <li>Manage your account and personal cellar</li>
+        <li>Enable wine label scanning and recognition</li>
+        <li>Send service-related notifications (updates, important changes)</li>
+        <li>Analyze App usage for improvement purposes</li>
+        <li>Ensure security and prevent abuse</li>
+      </ul>
+    </div>
+
+    <!-- 4. Legal Bases for Processing -->
+    <div class="policy-section">
+      <h2>4. Legal Bases for Processing</h2>
+      <p>In accordance with the General Data Protection Regulation (GDPR) and Quebec's Law 25, we process your data on the following bases:</p>
+      <ul>
+        <li><strong>Performance of contract:</strong> processing is necessary to provide you with the App's services</li>
+        <li><strong>Consent:</strong> when you expressly agree to certain processing (e.g., camera access, notifications)</li>
+        <li><strong>Legitimate interest:</strong> to improve our services and ensure the App's security</li>
+      </ul>
+    </div>
+
+    <!-- 5. Data Sharing -->
+    <div class="policy-section">
+      <h2>5. Data Sharing</h2>
+      <p>We do not sell your personal information. We may share your data with:</p>
+      <ul>
+        <li><strong>Service providers:</strong> technical partners who help us operate the App (hosting, analytics, image recognition), bound by confidentiality obligations</li>
+        <li><strong>Legal obligations:</strong> when required by law or in the context of legal proceedings</li>
+      </ul>
+      <p>No data is transferred for advertising or commercial profiling purposes.</p>
+    </div>
+
+    <!-- 6. Data Retention -->
+    <div class="policy-section">
+      <h2>6. Data Retention</h2>
+      <p>Your data is retained for as long as your account is active or as needed to provide the App's services.</p>
+      <p>If you delete your account, your personal information will be erased within 30 days, except for data we are required to retain under applicable law.</p>
+    </div>
+
+    <!-- 7. Data Security -->
+    <div class="policy-section">
+      <h2>7. Data Security</h2>
+      <p>We implement appropriate technical and organizational security measures to protect your personal information against unauthorized access, loss, destruction, or alteration, including:</p>
+      <ul>
+        <li>Encryption of data in transit (TLS/SSL)</li>
+        <li>Restricted access controls to personal data</li>
+        <li>Continuous system monitoring</li>
+      </ul>
+    </div>
+
+    <!-- 8. Your Rights -->
+    <div class="policy-section">
+      <h2>8. Your Rights</h2>
+      <p>Depending on your place of residence, you have certain rights regarding your personal data:</p>
+
+      <h3>Rights under Quebec's Law 25 and the GDPR (Europe)</h3>
+      <ul>
+        <li><strong>Right of access:</strong> obtain a copy of your personal data</li>
+        <li><strong>Right to rectification:</strong> correct inaccurate or incomplete data</li>
+        <li><strong>Right to erasure:</strong> request the deletion of your data</li>
+        <li><strong>Right to portability:</strong> receive your data in a structured, machine-readable format</li>
+        <li><strong>Right to object:</strong> object to certain processing of your data</li>
+        <li><strong>Right to withdraw consent:</strong> at any time, without affecting the lawfulness of prior processing</li>
+        <li><strong>Right to file a complaint:</strong> with the Commission d'accès à l'information du Québec (CAI) or the data protection authority of your country</li>
+      </ul>
+
+      <h3>Rights under CCPA / CPRA (California)</h3>
+      <ul>
+        <li><strong>Right to know:</strong> what personal data is collected, used, and shared</li>
+        <li><strong>Right to deletion:</strong> request the deletion of your personal data</li>
+        <li><strong>Right to opt out of sale:</strong> we do not sell your personal data</li>
+        <li><strong>Right to non-discrimination:</strong> you will not be penalized for exercising your rights</li>
+      </ul>
+
+      <p>To exercise any of these rights, please contact us at <a href="mailto:dev@thirstyc.com">dev@thirstyc.com</a>. We will respond to your request within the timeframes required by applicable law.</p>
+    </div>
+
+    <!-- 9. Children's Data -->
+    <div class="policy-section">
+      <h2>9. Children's Data</h2>
+      <p>The App is not intended for individuals under 18 years of age. We do not knowingly collect personal data from minors. If you are a parent or guardian and believe your child has provided us with personal data, please contact us at <a href="mailto:dev@thirstyc.com">dev@thirstyc.com</a> so we can delete that information.</p>
+    </div>
+
+    <!-- 10. Third-Party Services -->
+    <div class="policy-section">
+      <h2>10. Third-Party Services</h2>
+      <p>The App may integrate third-party services for its operation (cloud hosting, data analytics, image recognition). These services have their own privacy policies and we encourage you to review them.</p>
+      <p>The App may also contain links to external websites or services. We are not responsible for the privacy practices of these third parties.</p>
+    </div>
+
+    <!-- 11. Changes to This Policy -->
+    <div class="policy-section">
+      <h2>11. Changes to This Policy</h2>
+      <p>We may update this privacy policy from time to time. In the event of a material change, we will notify you through the App or by email before the changes take effect.</p>
+      <p>We encourage you to review this page regularly to stay informed about our privacy practices.</p>
+    </div>
+
+    <!-- 12. Contact Us -->
+    <div class="policy-section">
+      <h2>12. Contact Us</h2>
+      <p>For any questions or requests regarding this privacy policy or the processing of your personal data, please write to us:</p>
+      <div class="policy-contact">
+        <p><strong>Catherine Gignac</strong></p>
+        <p>Thirsty Cunt</p>
+        <p>Email: <a href="mailto:dev@thirstyc.com">dev@thirstyc.com</a></p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-bottom">
+      <span>&copy; 2025 Thirsty Cunt</span>
+      <span><a href="/" style="color: inherit; text-decoration: none; opacity: 0.85;">Back to site</a></span>
+    </div>
+  </footer>
+
+</body>
+</html>
