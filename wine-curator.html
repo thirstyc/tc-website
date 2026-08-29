@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wine Curator — Wine Advisory &amp; Curation for Collectors, Events and Corporate Tables | Thirsty Cunt</title>
+  <meta name="description" content="Wine Curator is Thirsty Cunt's advisory practice: curated wine selections for collectors, private events, parties, corporate dinners and client entertainment. We do the tasting, the thinking and the rationale; you pour." />
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
+  <link rel="canonical" href="https://www.thirstyc.com/wine-curator" />
+  <link rel="icon" type="image/png" href="assets/logo-turquoise.png" />
+  <link rel="apple-touch-icon" href="assets/logo-turquoise.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Thirsty Cunt" />
+  <meta property="og:title" content="Wine Curator — Thirsty Cunt's Advisory Practice" />
+  <meta property="og:description" content="Curated wine selections for collectors, events, parties, and corporate tables. You know what you want. We know which bottles deliver it." />
+  <meta property="og:url" content="https://www.thirstyc.com/wine-curator" />
+  <meta property="og:image" content="https://www.thirstyc.com/assets/logo-turquoise.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=IBM+Plex+Mono:wght@400;500&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet" />
+  
+  <style>
+    :root {
+      --vintage: #261614;
+      --mineral: #ADBDCC;
+      --deep-turquoise: #094943;
+      --turquoise: #009C8E;
+      --burnt-sunset: #C62F0E;
+      --dark-cherries: #700001;
+      --rose: #EDD9DF;
+      --cream: #faf7f2;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 300;
+      color: var(--vintage);
+      background: var(--cream);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .mono {
+      font-family: 'IBM Plex Mono', monospace;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 0.72rem;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1.5rem;
+      z-index: 100;
+      background: rgba(250, 247, 242, 0.85);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(38, 22, 20, 0.08);
+    }
+
+    nav .logo { display: block; line-height: 0; }
+    nav .logo img { height: 80px; width: auto; display: block; }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: clamp(1.2rem, 3vw, 2.4rem);
+    }
+
+    .nav-links a {
+      color: var(--vintage);
+      text-decoration: none;
+      opacity: 0.6;
+      transition: opacity 0.2s ease;
+    }
+
+    .nav-links a:hover { opacity: 1; }
+
+    .nav-links a[aria-current="page"] {
+      color: var(--deep-turquoise);
+      opacity: 1;
+      padding-bottom: 2px;
+      border-bottom: 1px solid var(--deep-turquoise);
+    }
+
+    @media (max-width: 640px) {
+      nav { padding: 0.75rem 1.25rem; }
+      nav .logo img { height: 52px; }
+      .nav-links { gap: 1rem; }
+      .nav-links a { font-size: 0.62rem; letter-spacing: 0.1em; }
+    }
+
+    .page {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 10rem 2rem 6rem;
+    }
+
+    @media (max-width: 640px) {
+      .page { padding: 7.5rem 1.25rem 4rem; }
+    }
+
+    .page section { padding: 4rem 0; border-bottom: 1px solid rgba(38, 22, 20, 0.08); }
+    .page section:first-of-type { padding: 0 0 4rem; border-bottom: 1px solid rgba(38, 22, 20, 0.12); }
+    .page section:last-of-type { padding: 4rem 0 0; border-bottom: none; }
+
+    h1, h2, h3.serif {
+      font-family: 'Instrument Serif', serif;
+      font-weight: 400;
+    }
+
+    h1 {
+      font-size: clamp(2.8rem, 7vw, 5.4rem);
+      line-height: 1.02;
+      letter-spacing: -0.025em;
+      margin-bottom: 1.5rem;
+    }
+
+    h2 {
+      font-size: clamp(1.9rem, 3.4vw, 2.6rem);
+      line-height: 1.08;
+      letter-spacing: -0.02em;
+      margin-bottom: 1.4rem;
+    }
+
+    .italic { font-style: italic; color: var(--deep-turquoise); }
+
+    .eyebrow {
+      display: block;
+      color: var(--vintage);
+      opacity: 0.6;
+      margin-bottom: 1.5rem;
+    }
+
+    .lede {
+      font-family: 'Instrument Serif', serif;
+      font-size: clamp(1.25rem, 2.4vw, 1.7rem);
+      line-height: 1.45;
+      max-width: 34ch;
+      text-wrap: pretty;
+    }
+
+    .body {
+      font-size: 1.05rem;
+      line-height: 1.75;
+      max-width: 62ch;
+      text-wrap: pretty;
+    }
+
+    .body + .body { margin-top: 1rem; }
+
+    .tiers {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2.5rem;
+      margin-top: 3.5rem;
+    }
+
+    .tier {
+      background: rgba(9, 73, 67, 0.05);
+      border-left: 3px solid var(--deep-turquoise);
+      padding: 1.6rem 1.8rem 1.9rem;
+    }
+
+    .tier h3 { color: var(--burnt-sunset); margin-bottom: 0.5rem; }
+    .tier .tier-note { font-size: 0.95rem; opacity: 0.7; margin-bottom: 1.4rem; }
+
+    .tier ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.9rem;
+    }
+
+    .tier li {
+      font-family: 'Instrument Serif', serif;
+      font-size: 1.45rem;
+      line-height: 1.15;
+      letter-spacing: -0.015em;
+    }
+
+    .tier li span {
+      display: block;
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.9rem;
+      opacity: 0.65;
+      margin-top: 0.2rem;
+    }
+
+    .steps { margin-top: 2.4rem; }
+
+    .step {
+      display: grid;
+      grid-template-columns: minmax(0, 170px) minmax(0, 1fr);
+      gap: 1.5rem;
+      padding: 1.6rem 0;
+      border-top: 1px solid rgba(38, 22, 20, 0.12);
+    }
+
+    .step:last-child { border-bottom: 1px solid rgba(38, 22, 20, 0.12); }
+    .step h3 { color: var(--burnt-sunset); margin-top: 0.35rem; }
+    .step p { font-size: 1.05rem; line-height: 1.7; max-width: 56ch; text-wrap: pretty; }
+
+    @media (max-width: 560px) {
+      .step { grid-template-columns: 1fr; gap: 0.6rem; }
+    }
+
+    .statement {
+      font-family: 'Instrument Serif', serif;
+      font-size: clamp(1.2rem, 2.2vw, 1.6rem);
+      line-height: 1.45;
+      max-width: 44ch;
+      text-wrap: pretty;
+    }
+
+    .cta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .cta p {
+      font-family: 'Instrument Serif', serif;
+      font-size: clamp(1.5rem, 3vw, 2.2rem);
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+    }
+
+    .cta a {
+      color: var(--deep-turquoise);
+      text-decoration: none;
+      border: 1px solid var(--deep-turquoise);
+      padding: 0.85rem 1.5rem;
+      display: inline-block;
+      transition: all 0.25s ease;
+    }
+
+    .cta a:hover { background: var(--deep-turquoise); color: var(--cream); }
+
+    footer {
+      background: var(--vintage);
+      color: var(--cream);
+      padding: 3rem 2rem;
+    }
+
+    .footer-bottom {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      opacity: 0.5;
+    }
+
+    @media (max-width: 600px) {
+      .footer-bottom { flex-direction: column; gap: 0.5rem; }
+    }
+
+    ::selection { background: var(--rose); color: var(--vintage); }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="/" class="logo" aria-label="Thirsty Cunt">
+      <img src="assets/logo-turquoise.png" alt="Thirsty Cunt" />
+    </a>
+    <div class="nav-links mono">
+      <a href="/">Home</a>
+      <a href="/wine-curator" aria-current="page">Wine Curator</a>
+      <a href="https://apps.apple.com/ca/app/thirsty-cellar/id6772614506" target="_blank" rel="noopener">App</a>
+    </div>
+  </nav>
+
+  <main class="page" itemscope itemtype="https://schema.org/Service">
+
+    <section>
+      <span class="mono eyebrow">Advisory</span>
+      <h1 itemprop="name">Wine <span class="italic">Curator.</span></h1>
+      <p class="lede">Curated wine selections for collectors, events, parties, and corporate tables. You know what you want. We know which bottles deliver it.</p>
+    </section>
+
+    <section>
+      <h2>What We <span class="italic">Do.</span></h2>
+      <p class="body">We curate wine selections for the tables that matter. Whether you're building a collector's rotation, sourcing for an event, or setting the tone for a corporate dinner — we do the tasting, the thinking, the conviction. You get the selection that works.</p>
+
+      <div class="tiers">
+        <div class="tier">
+          <h3 class="mono">For Your Own Table</h3>
+          <p class="tier-note">Your name on the invitation.</p>
+          <ul>
+            <li>Collectors<span>Standing or seasonal</span></li>
+            <li>Private Events</li>
+            <li>Parties</li>
+          </ul>
+        </div>
+        <div class="tier">
+          <h3 class="mono">For the Company's</h3>
+          <p class="tier-note">When the bottle is doing business.</p>
+          <ul>
+            <li>Corporate Dinners</li>
+            <li>Client Entertainment</li>
+            <li>Team Events</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Why a <span class="italic">Curator.</span></h2>
+      <p class="body">A good wine list is a series of decisions, and most of them are made badly under time pressure. Too many bottles, chosen to be safe, poured in the wrong order.</p>
+      <p class="body">We taste constantly and we hold opinions. What you get is a short list with a reason behind every bottle — fewer choices, better ones, and no performance required of you.</p>
+    </section>
+
+    <section>
+      <h2>How It <span class="italic">Works.</span></h2>
+      <div class="steps">
+        <div class="step">
+          <h3 class="mono">The Brief</h3>
+          <p>One conversation. The occasion, the room, the budget, the constraints — allergies, dry guests, a cellar you already own.</p>
+        </div>
+        <div class="step">
+          <h3 class="mono">The Dossier</h3>
+          <p>You receive a document, not a spreadsheet. Every bottle named, priced and sourced, each one with the story of why it's on your table — the grower, the vintage, what it does next to the food — written to be said out loud, not recited.</p>
+        </div>
+        <div class="step">
+          <h3 class="mono">The Table</h3>
+          <p>Serving order, temperatures, glassware, what to open if the night runs long. Standing clients get the next rotation before they ask.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Who This Is <span class="italic">For.</span></h2>
+      <p class="statement">Collectors building standing relationships. Events that need to feel intentional. Corporate dinners where wine sets the tone. Anyone who knows that the right bottles change the room.</p>
+    </section>
+
+    <section class="cta">
+      <p>Set the <span class="italic">table.</span></p>
+      <a class="mono" href="mailto:hello@thirstyc.com">Get in Touch</a>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Thirsty Cunt</span>
+      <span><a href="/" style="color: inherit; text-decoration: none; opacity: 0.85;">Back to site</a></span>
+    </div>
+  </footer>
+
+</body>
+</html>
