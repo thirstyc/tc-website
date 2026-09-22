@@ -279,7 +279,7 @@
 
       <h3>Camera data</h3>
       <ul>
-        <li>The App may access your camera for two features: scanning a wine label to add a bottle to your cellar, and photographing a restaurant wine list for the AI Sommelier. In both cases, the photo is sent to our AI provider, Anthropic (Claude), in the United States, and used only to identify the wine or read the wine list — see Section 10 for details on our providers. Photos are not stored after processing.</li>
+        <li>The App may access your camera for two features: scanning a wine label to add a bottle to your cellar, and photographing a restaurant wine list for the AI Sommelier. In both cases, the photo is sent to our AI provider, Anthropic (Claude), in the United States, and used only to identify the wine or read the wine list — see Section 10 for details on our providers. Photos are not stored by Thirsty Cellar.</li>
         <li>Wine label scanning has its own consent, asked in the App before you use it. You can turn it off at any time in Profile → Privacy.</li>
         <li>Wine-list scanning is part of the AI Sommelier and requires the AI Sommelier consent. It is limited to 30 scans per day.</li>
       </ul>
@@ -336,7 +336,7 @@
       <h2>6. Data Retention</h2>
       <p>Your data is retained for as long as your account is active or as needed to provide the App's services.</p>
       <p>AI Sommelier conversations are kept in your account so you can reopen them (History), until you delete your account.</p>
-      <p>Photos of wine labels and wine lists are not stored: they are sent to Anthropic for processing, then discarded.</p>
+      <p>Photos of wine labels and wine lists are not stored by Thirsty Cellar: they are sent to Anthropic for processing only.</p>
       <p>If you delete your account, your personal information will be erased within 30 days, except for data we are required to retain under applicable law.</p>
     </div>
 
@@ -391,7 +391,7 @@
       <ul>
         <li><strong>Supabase — United States (AWS us-west-2, Oregon).</strong> Hosts the App's database and runs its server functions: your account, your cellar and your AI Sommelier conversations are stored there.</li>
         <li><strong>Fireworks AI, Inc. — United States.</strong> Primary AI model provider for the AI Sommelier. Receives your question, the recent messages of the conversation and, for cellar recommendations, your cellar wines and taste summary, as described in "AI Sommelier data" in Section 2.</li>
-        <li><strong>Anthropic (Claude API) — United States.</strong> Answers AI Sommelier requests when Fireworks AI is unavailable, reads photos of restaurant wine lists, and identifies wines from label photos. Photos are not stored.</li>
+        <li><strong>Anthropic (Claude API) — United States.</strong> Answers AI Sommelier requests when Fireworks AI is unavailable, reads photos of restaurant wine lists, and identifies wines from label photos. Photos are not stored by Thirsty Cellar.</li>
         <li><strong>RevenueCat.</strong> Manages in-app subscriptions and purchases.</li>
         <li><strong>PostHog.</strong> Product analytics, off by default and used only if you opt in (Profile → Privacy).</li>
       </ul>

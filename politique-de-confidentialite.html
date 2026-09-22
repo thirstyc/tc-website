@@ -279,7 +279,7 @@
 
       <h3>Données issues de la caméra</h3>
       <ul>
-        <li>L'App peut accéder à votre caméra pour deux fonctionnalités : le scan d'une étiquette de vin pour ajouter une bouteille à votre cave, et la photographie d'une carte des vins de restaurant pour le Sommelier IA. Dans les deux cas, la photo est transmise à notre fournisseur d'IA, Anthropic (Claude), situé aux États-Unis, et utilisée uniquement pour identifier le vin ou lire la carte des vins — voir la section 10 pour le détail de nos fournisseurs. Les photos ne sont pas conservées après le traitement.</li>
+        <li>L'App peut accéder à votre caméra pour deux fonctionnalités : le scan d'une étiquette de vin pour ajouter une bouteille à votre cave, et la photographie d'une carte des vins de restaurant pour le Sommelier IA. Dans les deux cas, la photo est transmise à notre fournisseur d'IA, Anthropic (Claude), situé aux États-Unis, et utilisée uniquement pour identifier le vin ou lire la carte des vins — voir la section 10 pour le détail de nos fournisseurs. Les photos ne sont pas conservées par Thirsty Cellar.</li>
         <li>Le scan d'étiquettes fait l'objet d'un consentement distinct, demandé dans l'App avant son utilisation. Vous pouvez le désactiver à tout moment dans Profil → Confidentialité.</li>
         <li>Le scan de cartes des vins fait partie du Sommelier IA et nécessite le consentement au Sommelier IA. Il est limité à 30 scans par jour.</li>
       </ul>
@@ -336,7 +336,7 @@
       <h2>6. Conservation des données</h2>
       <p>Vos données sont conservées aussi longtemps que votre compte est actif ou que nécessaire pour vous fournir les services de l'Application.</p>
       <p>Les conversations avec le Sommelier IA sont conservées dans votre compte pour que vous puissiez les rouvrir (Historique), jusqu'à la suppression de votre compte.</p>
-      <p>Les photos d'étiquettes et de cartes des vins ne sont pas conservées : elles sont transmises à Anthropic pour traitement, puis supprimées.</p>
+      <p>Les photos d'étiquettes et de cartes des vins ne sont pas conservées par Thirsty Cellar : elles sont transmises à Anthropic uniquement pour traitement.</p>
       <p>Si vous supprimez votre compte, vos renseignements personnels seront effacés dans un délai de 30 jours, à l'exception des données que nous sommes tenus de conserver en vertu de la loi.</p>
     </div>
 
@@ -391,7 +391,7 @@
       <ul>
         <li><strong>Supabase — États-Unis (AWS us-west-2, Oregon).</strong> Héberge la base de données de l'Application et exécute ses fonctions serveur : votre compte, votre cave et vos conversations avec le Sommelier IA y sont conservés.</li>
         <li><strong>Fireworks AI, Inc. — États-Unis.</strong> Fournisseur principal de modèles d'IA pour le Sommelier IA. Reçoit votre question, les messages récents de la conversation et, pour les recommandations basées sur votre cave, les vins de votre cave et le résumé de vos goûts, tel que décrit dans « Données du Sommelier IA » à la section 2.</li>
-        <li><strong>Anthropic (API Claude) — États-Unis.</strong> Répond aux requêtes du Sommelier IA lorsque Fireworks AI n'est pas disponible, lit les photos de cartes des vins de restaurant et identifie les vins à partir des photos d'étiquettes. Les photos ne sont pas conservées.</li>
+        <li><strong>Anthropic (API Claude) — États-Unis.</strong> Répond aux requêtes du Sommelier IA lorsque Fireworks AI n'est pas disponible, lit les photos de cartes des vins de restaurant et identifie les vins à partir des photos d'étiquettes. Les photos ne sont pas conservées par Thirsty Cellar.</li>
         <li><strong>RevenueCat.</strong> Gère les abonnements et les achats intégrés à l'Application.</li>
         <li><strong>PostHog.</strong> Analyse d'usage du produit, désactivée par défaut et utilisée seulement si vous l'activez (Profil → Confidentialité).</li>
       </ul>
