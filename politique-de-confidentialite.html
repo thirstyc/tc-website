@@ -241,7 +241,7 @@
   <main class="policy">
     <span class="mono policy-eyebrow">Juridique</span>
     <h1>Politique de <span class="italic">confidentialité.</span></h1>
-    <span class="policy-date">Dernière mise à jour : 13 juillet 2026</span>
+    <span class="policy-date">Dernière mise à jour : 22 septembre 2026</span>
 
     <p class="policy-intro">
       La présente politique de confidentialité décrit comment Thirsty Cunt (« nous », « notre », « nos ») collecte, utilise et protège les renseignements personnels des utilisateurs de l'application mobile Thirsty Cellar (« l'Application »), disponible sur iOS.
@@ -273,18 +273,24 @@
       <h3>Données collectées automatiquement</h3>
       <ul>
         <li>Identifiants de l'appareil et informations techniques (modèle, version iOS, langue)</li>
-        <li>Données d'utilisation et d'interaction avec l'Application (fonctionnalités utilisées, fréquence d'utilisation)</li>
-        <li>Données de diagnostic et de performance (rapports d'erreurs)</li>
+        <li>Données d'utilisation et d'interaction avec l'Application (fonctionnalités utilisées, fréquence d'utilisation), seulement si vous activez l'analyse d'usage — désactivée par défaut</li>
+        <li>Rapports de plantage, seulement si vous choisissez de les partager avec les développeurs dans les réglages de votre iPhone (fournis par Apple)</li>
       </ul>
 
       <h3>Données issues de la caméra</h3>
       <ul>
-        <li>L'App peut accéder à votre caméra pour deux fonctionnalités : le scan d'une étiquette de vin pour ajouter une bouteille à votre cave, et la photographie d'une carte des vins de restaurant pour le Sommelier IA. Dans les deux cas, la photo est transmise à notre fournisseur d'IA, Anthropic (États-Unis), et utilisée uniquement pour en extraire le texte et les informations pertinentes sur les vins — voir la section 10 pour le détail de nos fournisseurs. Les photos ne sont pas conservées après le traitement.</li>
+        <li>L'App peut accéder à votre caméra pour deux fonctionnalités : le scan d'une étiquette de vin pour ajouter une bouteille à votre cave, et la photographie d'une carte des vins de restaurant pour le Sommelier IA. Dans les deux cas, la photo est transmise à notre fournisseur d'IA, Anthropic (Claude), situé aux États-Unis, et utilisée uniquement pour identifier le vin ou lire la carte des vins — voir la section 10 pour le détail de nos fournisseurs. Les photos ne sont pas conservées après le traitement.</li>
+        <li>Le scan d'étiquettes fait l'objet d'un consentement distinct, demandé dans l'App avant son utilisation. Vous pouvez le désactiver à tout moment dans Profil → Confidentialité.</li>
+        <li>Le scan de cartes des vins fait partie du Sommelier IA et nécessite le consentement au Sommelier IA. Il est limité à 30 scans par jour.</li>
       </ul>
 
       <h3>Données du Sommelier IA</h3>
       <ul>
-        <li>Lorsque vous utilisez le Sommelier IA, les questions que vous saisissez sont transmises à notre fournisseur d'IA, Fireworks AI, Inc., dont les serveurs sont situés aux États-Unis, afin de générer une réponse. Si vous utilisez les recommandations basées sur votre cave (Thirsty+), des informations sur les vins de votre cave (noms des vins, producteurs, millésimes et attributs de dégustation) sont incluses afin que le sommelier puisse recommander parmi vos propres bouteilles. Nous ne transmettons jamais votre nom, votre adresse courriel, votre identifiant de compte ni aucune autre information permettant de vous identifier avec ces requêtes, et nous filtrons automatiquement les adresses courriel, numéros de téléphone et coordonnées similaires de vos messages avant leur envoi. Votre historique de conversation est conservé sur nos propres serveurs (hébergés par Supabase), et non chez le fournisseur d'IA.</li>
+        <li>Pour répondre, l'App envoie votre question et les messages récents de la conversation (jusqu'aux 10 derniers) à un fournisseur de modèles d'IA situé aux États-Unis : Fireworks AI, ou Anthropic (Claude) si Fireworks n'est pas disponible. Les photos de cartes des vins sont envoyées à Anthropic pour être lues.</li>
+        <li>Pour les recommandations basées sur votre cave (abonnement Thirsty), nous envoyons aussi les vins de votre cave (nom, producteur, millésime et style, jusqu'à 50 bouteilles) et un court résumé de vos goûts, tiré de vos notes et de votre liste d'envies (par exemple, les styles que vous notez bien ou mal).</li>
+        <li>Nous n'envoyons jamais votre nom, votre courriel ni votre compte. Les adresses courriel et numéros de téléphone dans vos messages sont retirés avant l'envoi.</li>
+        <li>Les fournisseurs n'utilisent pas vos données pour entraîner leurs modèles. Nous conservons vos conversations dans votre compte Thirsty Cellar pour que vous puissiez les rouvrir (Historique), jusqu'à la suppression de votre compte.</li>
+        <li>L'App vous demande votre consentement avant la première utilisation du Sommelier IA, puis de nouveau chaque fois que le texte de consentement change. Vous pouvez retirer votre consentement à tout moment dans Profil → Confidentialité.</li>
       </ul>
     </div>
 
@@ -295,9 +301,10 @@
       <ul>
         <li>Fournir, maintenir et améliorer les fonctionnalités de l'Application</li>
         <li>Gérer votre compte et votre cave personnelle</li>
-        <li>Permettre la numérisation et la reconnaissance d'étiquettes de vin</li>
+        <li>Répondre à vos questions et vous faire des recommandations par le Sommelier IA</li>
+        <li>Permettre la numérisation et la reconnaissance d'étiquettes de vin, ainsi que la lecture de cartes des vins</li>
         <li>Envoyer des notifications liées au service (mises à jour, changements importants)</li>
-        <li>Analyser l'utilisation de l'Application à des fins d'amélioration</li>
+        <li>Analyser l'utilisation de l'Application à des fins d'amélioration, seulement si vous activez l'analyse d'usage</li>
         <li>Assurer la sécurité et prévenir les abus</li>
       </ul>
     </div>
@@ -308,8 +315,8 @@
       <p>Conformément au Règlement général sur la protection des données (RGPD) et à la Loi 25 du Québec, nous traitons vos données sur les bases suivantes :</p>
       <ul>
         <li><strong>Exécution du contrat :</strong> le traitement est nécessaire pour vous fournir les services de l'Application</li>
-        <li><strong>Consentement :</strong> lorsque vous acceptez expressément certains traitements (ex. : accès à la caméra, notifications)</li>
-        <li><strong>Intérêt légitime :</strong> pour améliorer nos services et assurer la sécurité de l'Application</li>
+        <li><strong>Consentement :</strong> lorsque vous acceptez expressément certains traitements (ex. : Sommelier IA, scan d'étiquettes, analyse d'usage, accès à la caméra, notifications)</li>
+        <li><strong>Intérêt légitime :</strong> pour assurer la sécurité et le bon fonctionnement de l'Application (ex. : prévenir la fraude et les abus)</li>
       </ul>
     </div>
 
@@ -318,7 +325,7 @@
       <h2>5. Partage des données</h2>
       <p>Nous ne vendons pas vos renseignements personnels. Nous pouvons partager vos données avec :</p>
       <ul>
-        <li><strong>Fournisseurs de services :</strong> prestataires techniques qui nous aident à exploiter l'Application (hébergement, analyse, reconnaissance d'images), soumis à des obligations de confidentialité</li>
+        <li><strong>Fournisseurs de services :</strong> prestataires techniques qui nous aident à exploiter l'Application (hébergement, traitement par IA, abonnements, analyse), soumis à des obligations de confidentialité — voir la section 10</li>
         <li><strong>Obligations légales :</strong> si la loi l'exige ou dans le cadre d'une procédure judiciaire</li>
       </ul>
       <p>Aucun transfert de données à des fins publicitaires ou de profilage commercial n'est effectué.</p>
@@ -328,6 +335,8 @@
     <div class="policy-section">
       <h2>6. Conservation des données</h2>
       <p>Vos données sont conservées aussi longtemps que votre compte est actif ou que nécessaire pour vous fournir les services de l'Application.</p>
+      <p>Les conversations avec le Sommelier IA sont conservées dans votre compte pour que vous puissiez les rouvrir (Historique), jusqu'à la suppression de votre compte.</p>
+      <p>Les photos d'étiquettes et de cartes des vins ne sont pas conservées : elles sont transmises à Anthropic pour traitement, puis supprimées.</p>
       <p>Si vous supprimez votre compte, vos renseignements personnels seront effacés dans un délai de 30 jours, à l'exception des données que nous sommes tenus de conserver en vertu de la loi.</p>
     </div>
 
@@ -378,12 +387,15 @@
     <!-- 10. Services tiers -->
     <div class="policy-section">
       <h2>10. Services tiers</h2>
-      <p>L'Application peut intégrer des services tiers pour son fonctionnement (hébergement cloud, analyse de données, reconnaissance d'images). Ces services ont leurs propres politiques de confidentialité et nous vous encourageons à les consulter.</p>
-      <p>Nous faisons appel aux fournisseurs d'intelligence artificielle suivants pour certaines fonctionnalités :</p>
+      <p>L'Application fait appel aux fournisseurs de services (sous-traitants) suivants pour son fonctionnement. Plusieurs sont situés aux États-Unis, ce qui signifie que vos renseignements peuvent être traités à l'extérieur du Québec. Ces services ont leurs propres politiques de confidentialité et nous vous encourageons à les consulter.</p>
       <ul>
-        <li><strong>Anthropic (API Claude) — États-Unis.</strong> Traite les photos que vous prenez lors du scan d'une étiquette de vin ou d'une carte des vins de restaurant, afin d'en extraire les informations. Les photos sont transmises uniquement à des fins de traitement et ne sont pas utilisées par Anthropic pour entraîner ses modèles.</li>
-        <li><strong>Fireworks AI, Inc. — États-Unis.</strong> Traite vos questions au Sommelier IA et, pour les recommandations basées sur votre cave, des informations non identifiantes sur les vins de votre cave. Voir « Données du Sommelier IA » à la section 2 pour les mesures de protection appliquées avant tout envoi.</li>
+        <li><strong>Supabase — États-Unis (AWS us-west-2, Oregon).</strong> Héberge la base de données de l'Application et exécute ses fonctions serveur : votre compte, votre cave et vos conversations avec le Sommelier IA y sont conservés.</li>
+        <li><strong>Fireworks AI, Inc. — États-Unis.</strong> Fournisseur principal de modèles d'IA pour le Sommelier IA. Reçoit votre question, les messages récents de la conversation et, pour les recommandations basées sur votre cave, les vins de votre cave et le résumé de vos goûts, tel que décrit dans « Données du Sommelier IA » à la section 2.</li>
+        <li><strong>Anthropic (API Claude) — États-Unis.</strong> Répond aux requêtes du Sommelier IA lorsque Fireworks AI n'est pas disponible, lit les photos de cartes des vins de restaurant et identifie les vins à partir des photos d'étiquettes. Les photos ne sont pas conservées.</li>
+        <li><strong>RevenueCat.</strong> Gère les abonnements et les achats intégrés à l'Application.</li>
+        <li><strong>PostHog.</strong> Analyse d'usage du produit, désactivée par défaut et utilisée seulement si vous l'activez (Profil → Confidentialité).</li>
       </ul>
+      <p>Ces fournisseurs d'IA n'utilisent pas vos données pour entraîner leurs modèles.</p>
       <p>L'Application peut également contenir des liens vers des sites ou services externes. Nous ne sommes pas responsables des pratiques de confidentialité de ces tiers.</p>
     </div>
 

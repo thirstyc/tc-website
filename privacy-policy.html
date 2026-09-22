@@ -241,7 +241,7 @@
   <main class="policy">
     <span class="mono policy-eyebrow">Legal</span>
     <h1>Privacy <span class="italic">Policy.</span></h1>
-    <span class="policy-date">Last updated: July 13, 2026</span>
+    <span class="policy-date">Last updated: September 22, 2026</span>
 
     <p class="policy-intro">
       This privacy policy describes how Thirsty Cunt ("we," "our," "us") collects, uses, and protects the personal information of users of the Thirsty Cellar mobile application (the "App"), available on iOS.
@@ -273,18 +273,24 @@
       <h3>Information collected automatically</h3>
       <ul>
         <li>Device identifiers and technical information (model, iOS version, language)</li>
-        <li>Usage and interaction data (features used, frequency of use)</li>
-        <li>Diagnostic and performance data (crash reports)</li>
+        <li>Usage and interaction data (features used, frequency of use), only if you turn on usage analytics — this is off by default</li>
+        <li>Crash reports, only if you choose to share them with app developers in your iPhone's settings (provided by Apple)</li>
       </ul>
 
       <h3>Camera data</h3>
       <ul>
-        <li>The App may access your camera for two features: scanning a wine label to add a bottle to your cellar, and photographing a restaurant wine list for the AI Sommelier. In both cases, the photo is sent to our AI provider, Anthropic (United States), and used only to extract the relevant text and wine information — see Section 10 for details on our providers. Photos are not retained after processing.</li>
+        <li>The App may access your camera for two features: scanning a wine label to add a bottle to your cellar, and photographing a restaurant wine list for the AI Sommelier. In both cases, the photo is sent to our AI provider, Anthropic (Claude), in the United States, and used only to identify the wine or read the wine list — see Section 10 for details on our providers. Photos are not stored after processing.</li>
+        <li>Wine label scanning has its own consent, asked in the App before you use it. You can turn it off at any time in Profile → Privacy.</li>
+        <li>Wine-list scanning is part of the AI Sommelier and requires the AI Sommelier consent. It is limited to 30 scans per day.</li>
       </ul>
 
       <h3>AI Sommelier data</h3>
       <ul>
-        <li>When you use the AI Sommelier, the questions you type are sent to our AI provider, Fireworks AI, Inc., whose servers are located in the United States, to generate a response. If you use cellar-based recommendations (Thirsty+), information about the wines in your cellar (wine names, producers, vintages, and tasting attributes) is included so the sommelier can recommend from your own bottles. We never send your name, email address, account ID, or any other identifying information with these requests, and we automatically filter email addresses, phone numbers, and similar contact details out of your messages before they are sent. Your conversation history is stored on our own servers (hosted by Supabase), not by the AI provider.</li>
+        <li>To answer, the App sends your question and the recent messages of the conversation (up to the last 10) to an AI model provider in the United States: Fireworks AI, or Anthropic (Claude) if Fireworks is unavailable. Photos of wine lists go to Anthropic so they can be read.</li>
+        <li>For cellar recommendations (Thirsty membership), we also send the wines in your cellar (name, producer, vintage and style, up to 50 bottles) and a short summary of your taste, drawn from your ratings and wishlist (for example, the styles you rate highly or low).</li>
+        <li>We never send your name, email or account. Email addresses and phone numbers in your messages are removed before they are sent.</li>
+        <li>The providers don't use your data to train their models. We keep your conversations in your Thirsty Cellar account so you can reopen them (History), until you delete your account.</li>
+        <li>The App asks for your consent before you first use the AI Sommelier, and asks again whenever the consent text changes. You can withdraw your consent at any time in Profile → Privacy.</li>
       </ul>
     </div>
 
@@ -295,9 +301,10 @@
       <ul>
         <li>Provide, maintain, and improve the App's features</li>
         <li>Manage your account and personal cellar</li>
-        <li>Enable wine label scanning and recognition</li>
+        <li>Answer your questions and make recommendations through the AI Sommelier</li>
+        <li>Enable wine label scanning and recognition, and wine-list reading</li>
         <li>Send service-related notifications (updates, important changes)</li>
-        <li>Analyze App usage for improvement purposes</li>
+        <li>Analyze App usage for improvement purposes, only if you opt in to usage analytics</li>
         <li>Ensure security and prevent abuse</li>
       </ul>
     </div>
@@ -308,8 +315,8 @@
       <p>In accordance with the General Data Protection Regulation (GDPR) and Quebec's Law 25, we process your data on the following bases:</p>
       <ul>
         <li><strong>Performance of contract:</strong> processing is necessary to provide you with the App's services</li>
-        <li><strong>Consent:</strong> when you expressly agree to certain processing (e.g., camera access, notifications)</li>
-        <li><strong>Legitimate interest:</strong> to improve our services and ensure the App's security</li>
+        <li><strong>Consent:</strong> when you expressly agree to certain processing (e.g., the AI Sommelier, wine label scanning, usage analytics, camera access, notifications)</li>
+        <li><strong>Legitimate interest:</strong> to keep the App secure and working properly (e.g., preventing fraud and abuse)</li>
       </ul>
     </div>
 
@@ -318,7 +325,7 @@
       <h2>5. Data Sharing</h2>
       <p>We do not sell your personal information. We may share your data with:</p>
       <ul>
-        <li><strong>Service providers:</strong> technical partners who help us operate the App (hosting, analytics, image recognition), bound by confidentiality obligations</li>
+        <li><strong>Service providers:</strong> technical partners who help us operate the App (hosting, AI processing, subscriptions, analytics), bound by confidentiality obligations — see Section 10</li>
         <li><strong>Legal obligations:</strong> when required by law or in the context of legal proceedings</li>
       </ul>
       <p>No data is transferred for advertising or commercial profiling purposes.</p>
@@ -328,6 +335,8 @@
     <div class="policy-section">
       <h2>6. Data Retention</h2>
       <p>Your data is retained for as long as your account is active or as needed to provide the App's services.</p>
+      <p>AI Sommelier conversations are kept in your account so you can reopen them (History), until you delete your account.</p>
+      <p>Photos of wine labels and wine lists are not stored: they are sent to Anthropic for processing, then discarded.</p>
       <p>If you delete your account, your personal information will be erased within 30 days, except for data we are required to retain under applicable law.</p>
     </div>
 
@@ -378,12 +387,15 @@
     <!-- 10. Third-Party Services -->
     <div class="policy-section">
       <h2>10. Third-Party Services</h2>
-      <p>The App may integrate third-party services for its operation (cloud hosting, data analytics, image recognition). These services have their own privacy policies and we encourage you to review them.</p>
-      <p>We use the following artificial-intelligence providers to power specific features:</p>
+      <p>The App relies on the following service providers (sub-processors) for its operation. Several are located in the United States, which means your information may be processed outside Quebec. These services have their own privacy policies and we encourage you to review them.</p>
       <ul>
-        <li><strong>Anthropic (Claude API) — United States.</strong> Processes the photos you take when scanning a wine label or a restaurant wine list, in order to extract the wine information. Photos are sent for processing only and are not used by Anthropic to train its models.</li>
-        <li><strong>Fireworks AI, Inc. — United States.</strong> Processes your AI Sommelier questions and, for cellar-based recommendations, non-identifying information about the wines in your cellar. See "AI Sommelier data" in Section 2 for the protective measures we apply before anything is sent.</li>
+        <li><strong>Supabase — United States (AWS us-west-2, Oregon).</strong> Hosts the App's database and runs its server functions: your account, your cellar and your AI Sommelier conversations are stored there.</li>
+        <li><strong>Fireworks AI, Inc. — United States.</strong> Primary AI model provider for the AI Sommelier. Receives your question, the recent messages of the conversation and, for cellar recommendations, your cellar wines and taste summary, as described in "AI Sommelier data" in Section 2.</li>
+        <li><strong>Anthropic (Claude API) — United States.</strong> Answers AI Sommelier requests when Fireworks AI is unavailable, reads photos of restaurant wine lists, and identifies wines from label photos. Photos are not stored.</li>
+        <li><strong>RevenueCat.</strong> Manages in-app subscriptions and purchases.</li>
+        <li><strong>PostHog.</strong> Product analytics, off by default and used only if you opt in (Profile → Privacy).</li>
       </ul>
+      <p>These AI providers don't use your data to train their models.</p>
       <p>The App may also contain links to external websites or services. We are not responsible for the privacy practices of these third parties.</p>
     </div>
 
